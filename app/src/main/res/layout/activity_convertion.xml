@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    android:layout_centerHorizontal="true"
     android:gravity="center_horizontal"
-    android:background="@color/colorPrimary"
     tools:context="com.koloapps.contest.cryptocomparecurrencyconverter.ConvertionActivity">
 
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_marginBottom="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="8dp"
         tools:layout_editor_absoluteY="8dp"
@@ -22,20 +26,21 @@
 
 
             <ImageView
+                android:contentDescription="Bitcoin image"
                 android:id="@+id/img"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:srcCompat="@drawable/btc_logo" />
+                app:srcCompat="@drawable/btc_coin" />
 
 <TextView
+    android:layout_marginStart="15dp"
     android:layout_marginLeft="15dp"
-    android:textSize="25dp"
+    android:textSize="20sp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor="#ffffff"
+    android:textColor="#100d0d"
     android:textStyle="italic"
-
-    android:text="CONVERT"/>
+ android:text="@string/convert"/>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -62,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:numeric="decimal"
-                        android:hint="From"
+                        android:hint="@string/from"
                         android:layout_margin="4dp" />
 
                     <Spinner
@@ -79,7 +84,7 @@
                 <View
                     android:id="@+id/view"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1dp"
                     android:background="#f5921a" />
 
                 <LinearLayout
@@ -95,7 +100,7 @@
                         android:layout_gravity="center"
                         android:textSize="23sp"
                         android:layout_height="wrap_content"
-                        android:hint="To"
+                        android:hint="@string/to"
                         android:layout_margin="4dp" />
 
                     <Spinner
@@ -109,6 +114,19 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
-
-
-</LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3517746418699749/5415292728">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+</RelativeLayout>

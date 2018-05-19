@@ -1,10 +1,17 @@
 package com.koloapps.contest.cryptocomparecurrencyconverter;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,8 +19,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
-
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.koloapps.contest.cryptocomparecurrencyconverter.Model.Utils;
 
 import java.text.DecimalFormat;
@@ -23,6 +35,8 @@ public class ConvertionActivity extends AppCompatActivity {
     EditText first;
     TextView second;
     Spinner spinner, spinner2;
+    AdView mAdView;
+    private InterstitialAd mInterstitialAd;
     //defind String Array for spinner
     String[] spinner_first = {"BTC - BitCoin", "ETH- Ethereum"};
     String[] spinner_second = {"USD - US Dollar", "EUR", "NAIRA - Nigeria", "GBP - British Pound",
@@ -49,16 +63,43 @@ public class ConvertionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convertion);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // get value parsed from MainActivity
         BtcGetUsd = getIntent().getExtras().getDouble("btc");
         EthGetUSD = getIntent().getExtras().getDouble("eth");
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(R.string.can_now_convert);
+        alertDialogBuilder
+                .setMessage(R.string.click_help)
+                .setCancelable(true)
+                .setPositiveButton(R.string.ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        })
 
+                .setNegativeButton(R.string.help_short, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent intent = new Intent(ConvertionActivity.this, Main3Activity.class);
+                        intent.putExtra("btc", BtcGetUsd);
+                        intent.putExtra("eth", EthGetUSD);
+                        startActivity(intent);
+
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
         //initialized views
-        first = (EditText) findViewById(   R.id.firstEdit);
+        first = (EditText) findViewById(R.id.firstEdit);
         second = (TextView) findViewById(R.id.secondEdit);
         imageView = (ImageView) findViewById(R.id.img);
         line = findViewById(R.id.view);
+        MobileAds.initialize(getApplicationContext(),
+                "ca-app-pub-3517746418699749~7280583326");
+        mAdView = (AdView) findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //initialized spinnerFirst
         spinner = (Spinner) findViewById(R.id.spinnerFirst);
@@ -72,7 +113,7 @@ public class ConvertionActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 int pos = spinner.getSelectedItemPosition();
                 if (pos == 0) {
-                    imageView.setImageResource(R.drawable.btc_logo);
+                    imageView.setImageResource(R.drawable.btc_coin);
                     //get Spinner selected item value
                     first_selected = BtcGetUsd;
 
@@ -92,7 +133,7 @@ public class ConvertionActivity extends AppCompatActivity {
 
                     //display in TextView
                     second.setText(df.format(uu));
-                    imageView.setImageResource(R.drawable.eth_logo);
+                    imageView.setImageResource(R.drawable.eth_coin);
                     line.setBackgroundColor(getResources().getColor(R.color.ethColor));
                 }
 
@@ -142,7 +183,7 @@ public class ConvertionActivity extends AppCompatActivity {
                 } else if (sel == "ING - Indian Ruppe") {
                     second_selected = 0.01538;
                     double uu = (first_selected / second_selected) * getText;
-                    second.setText(Utils.getCurrencySymbol("ING") + df.format(uu));
+                    second.setText(df.format(uu));
                 } else if (sel == "AUD - Austrialian Dollar") {
                     second_selected = 0.76834;
                     double uu = (first_selected / second_selected) * getText;
@@ -241,6 +282,269 @@ public class ConvertionActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
 
 
-}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+
+            onBackPressed();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+        }
+        if (id == R.id.remove) {
+            onBackPressed();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+        }
+
+        if (id == R.id.share) {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "Hy, Download this Bitcoin and Ethereum android application, it's very useful, you can track Bitcoin and Ethereum exchange prices and can also convert to your local currency, i Love it! Am sure you will also Check it out using this link here.... https://play.google.com/store/apps/details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
+            startActivity(shareIntent);
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+
+        }
+        if (id == R.id.settings) {
+
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(R.string.notifications_allow);
+            alertDialogBuilder
+                    .setMessage("")
+                    .setCancelable(false)
+                    .setPositiveButton(R.string.yes,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    Toast.makeText(getApplicationContext(), R.string.settings_saved, Toast.LENGTH_LONG).show();
+
+
+                                }
+                            })
+
+                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Toast.makeText(getApplicationContext(), R.string.settings_saved, Toast.LENGTH_LONG).show();
+                            dialog.cancel();
+
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+        }
+
+        if (id == R.id.exit) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(R.string.exitApplication);
+            alertDialogBuilder
+                    .setMessage(R.string.googleplaystore)
+                    .setCancelable(true)
+                    .setPositiveButton(R.string.exit,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    moveTaskToBack(true);
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(1);
+
+                                }
+                            })
+
+                    .setNegativeButton(R.string.rate, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
+                            startActivity(intent);
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+
+        }
+        if (id == R.id.rate) {
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
+            startActivity(intent);
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            } else {
+                Log.d("TAG", "The interstitial wasn't loaded yet.");
+            }
+
+        }if (id == R.id.help) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(R.string.notifications_allow);
+            alertDialogBuilder
+                    .setMessage(R.string.offline_help)
+                    .setCancelable(true)
+                    .setPositiveButton(R.string.ok,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+
+                                }
+                            })
+
+                    .setNegativeButton("", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+
+        } if (id == R.id.news) {
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+        }if (id == R.id.offline){
+            Intent intent = new Intent(this, Main3Activity.class);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+            startActivity(intent);
+        }
+
+            if (id == R.id.about) {
+                Intent intent = new Intent(this, Main2Activity.class);
+                startActivity(intent);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+
+
+
+            return super.onOptionsItemSelected(item);
+
+
+            // Inflate the menu; this adds items to the action bar if it is present.
+
+
+        }
+    }
+
+

@@ -1,4 +1,71 @@
 <resources>
-    <string name="app_name">CryptocompareCurrencyConverter</string>
-    <string name="click_text">Click to Convert to your Local currency</string>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">START</string>
+
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="about"><b>  Bitcoin/Ethereum Tracker and converter Android App tracks Bitcoin and Ethereum Exchange prices in realtime and displays the price results in $ and your desired local currency. \n
+        Bitcoin and Ethereum App also allows you to convert Bitcoin and Ethereum exchange price to your desired local currency based on the current standard exchange price at that time.\n  Allow notification to always received realtime alerts on increase of Bitcoin and Ethereum prices. \n If you wish to add a country local currency or if your country\'s local currency exchange price is not listed, \n please do send us a feedback with your country name and local currency name and we will add it. \n Help n how to convert
+    BTC and ETH Offline without data connection \n
+        (1). Enter a value of 1 BTC/ETH in US$ (A default value has been presented) \n
+        (2). The default value is from previous Exchange price loaded \n
+        (3). Enter the amount of BTC/ETH you want to convert \n
+        (4). Select Bitcoin if you are converting for Bitcoin or Ethereum for Conversion in Ethereum \n
+        (5). Select Calculate BTC for Bitcoin or Calculate ETH for Ethereum and your conversion is complete (Ensure you select Bitcoin or Ethereum Before conversion) \n
+        (6). Select your desire currency</b></string>
+
+    <string name="notifications_allow">
+        Allow Notifications For Daily Bitcoin/Ethereum Prices?
+    </string>
+    <string name="settings_saved">Settings Saved</string>
+    <string name="rate">Rate</string>
+    <string name="retriving">"Retriving Latest BTC/ETH Exchange Price"</string>
+    <string name="wait" translatable="false">Please wait....</string>
+    <string name="exitApplication">Exit Application?</string>
+    <string name="googleplaystore">Rate us on Googleplaystore!</string>
+    <string name="exit">Exit</string>
+    <string name="click_help">Click Help to learn more</string>
+    <string name="help_short">Help</string>
+    <string name="can_now_convert">You can now convert BTC/ETH offline without data connection</string>
+    <string name="swipe_down">Swipe down to Refresh</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="offline_title">
+        Converting Bitcoin/Ethereum Offline Help
+    </string>
+    <string name="offline_help">
+        (1). Enter a value of 1 BTC/ETH in US$ (A default value has been presented) \n
+        (2). The default value is from previous Exchange price loaded \n
+        (3). Enter the amount of BTC/ETH you want to convert \n
+        (4). Select Bitcoin if you are converting for Bitcoin or Ethereum for Conversion in Ethereum \n
+        (5). Select Calculate BTC for Bitcoin or Calculate ETH for Ethereum and your conversion is complete (Ensure you select Bitcoin or Ethereum Before conversion) \n
+        (6). Select your desire currency \n
+    </string>
+    <string name="start_conversion_below">Start Conversion below</string>
+    <string name="_1_btc" translatable="false">1 BTC ($):</string>
+    <string name="no_connection_found">No Connection Found</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">Your connection to the wireless network is turned off. Restore your connections and swipe down to refresh</string>
+    <string name="convert_offline">Convert Offline</string>
+    <string name="btc_usd" translatable="false">BTC - USD</string>
+    <string name="just_now">Just Now</string>
+    <string name="eth_usd" translatable="false">ETH - USD</string>
+    <string name="share">Share</string>
+    <string name="notifications">Notifications</string>
+    <string name="about_menu">About</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="rate_app">Rate App</string>
+    <string name="exit_app">Exit App</string>
+    <string name="help">Help</string>
+    <string name="bitcoin_ethereum_news">Bitcoin/Ethereum News</string>
+    <string name="offline">Convert offline</string>
+    <string name="feedback">feedback</string>
+    <string name="converter">Converter</string>
+    <string name="tracker">Tracker</string>
+    <string name="and"><![CDATA[&]]></string>
+    <string name="convert">Convert</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
 </resources>

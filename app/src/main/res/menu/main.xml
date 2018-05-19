@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:title="@string/share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="99"
+        android:title="@string/notifications"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="99"
+        android:title="@string/about_menu"
+        android:icon="@drawable/ic_contact_mail"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/remove"
+        android:orderInCategory="99"
+        android:title="@string/remove_ads"
+        android:icon="@drawable/ic_visibility_off"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/rate"
+        android:orderInCategory="100"
+        android:title="@string/rate_app"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="101"
+        android:title="@string/exit_app"
+        android:icon="@drawable/ic_exit"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/ic_help"
+        android:id="@+id/help"
+        android:title="@string/help"
+        android:orderInCategory="102"
+        app:showAsAction="withText"/>
+    <item
+        android:icon="@drawable/ic_new"
+        android:id="@+id/news"
+        android:title="@string/bitcoin_ethereum_news"
+        android:orderInCategory="103"
+        app:showAsAction="withText"/>
+    <item
+        android:icon="@drawable/ic_network"
+        android:orderInCategory="103"
+        android:title="@string/offline"
+        android:id="@+id/offline"
+        app:showAsAction="ifRoom"/>
+</menu>
