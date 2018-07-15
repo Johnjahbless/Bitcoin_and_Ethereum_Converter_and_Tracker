@@ -23,7 +23,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.kobakei.ratethisapp.RateThisApp;
 import com.koloapps.contest.cryptocomparecurrencyconverter.APICALL.APIClient;
 import com.koloapps.contest.cryptocomparecurrencyconverter.APICALL.APIService;
 import com.koloapps.contest.cryptocomparecurrencyconverter.Model.BTC;
@@ -60,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
     TextView eth_eur;
     TextView btc_ngn;
     TextView eth_ngn;
+    TextView btc_thb;
+    TextView eth_thb;
+    TextView btc_brl;
+    TextView eth_brl;
     TextView btc_ghs;
     TextView eth_ghs;
     TextView btc_zar;
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout linearLayout;
     DecimalFormat df = new DecimalFormat("####0.00");
     double first_selected, first_selected1, second_selected, second_selected1, ghs_selected, zar_selected, kes_selected, gbp_selected,
-            ing_selected;
+            ing_selected, brl_selected, thb_selected;
 
 
     @Override
@@ -89,13 +92,15 @@ public class MainActivity extends AppCompatActivity {
         mAdView = (AdView) findViewById(R.id.adView2);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+       // Locale locale = new Locale("pt-rBR", "de" + "es", "hi-rIN" + "ru-rRU");
+        //Configuration config = getBaseContext().getResources().getConfiguration();
+        //config.locale = locale;
+        //getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3517746418699749/8344708392");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        RateThisApp.Config config = new RateThisApp.Config(3, 2);
-        config.setUrl("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
-        RateThisApp.init(config);
+
 
 
         //initialized progressDialog
@@ -112,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
         eth_eur = (TextView) findViewById(R.id.eth_eur);
         btc_ngn = (TextView) findViewById(R.id.btc_ngn);
         eth_ngn = (TextView) findViewById(R.id.eth_ngn);
+        btc_thb = (TextView) findViewById(R.id.btc_thb);
+        eth_thb = (TextView) findViewById(R.id.eth_thb);
+        btc_brl = (TextView) findViewById(R.id.btc_brl);
+        eth_brl = (TextView) findViewById(R.id.eth_brl);
         btc_ghs = (TextView) findViewById(R.id.btc_ghs);
         eth_ghs = (TextView) findViewById(R.id.eth_ghs);
         btc_zar = (TextView) findViewById(R.id.btc_zar);
@@ -141,6 +150,13 @@ public class MainActivity extends AppCompatActivity {
         CardView cardView_eth_gbp = (CardView) findViewById(R.id.gbp_cardeth);
         CardView cardView_btc_ing = (CardView) findViewById(R.id.ing_cardbtc);
         CardView cardView_eth_ing = (CardView) findViewById(R.id.ing_cardeth);
+
+        CardView cardView_btc_ngn = (CardView) findViewById(R.id.ngn_cardbtc);
+        CardView cardView_eth_ngn = (CardView) findViewById(R.id.ngn_cardeth);
+        CardView cardView_btc_brl = (CardView) findViewById(R.id.brl_cardbtc);
+        CardView cardView_eth_brl = (CardView) findViewById(R.id.brl_cardeth);
+        CardView cardView_btc_thb = (CardView) findViewById(R.id.thb_cardbtc);
+        CardView cardView_eth_thb = (CardView) findViewById(R.id.thb_cardeth);
         String base64EncodedPublicKey =
                 "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmkDy9FPMEqdytnI5JSmSiT+SFLiNFEjyiWMa0zDJ1Q6WuN5dPtcg37RyQM7dsaQzU/KipaEC9v/CYpgTQFV4Ou96Z67V+TLSFMP33sNKhXTNgBc7OOTfjb4pWKzWVHxZKakqvHHGajCvevOUqmz6ZzS+ejASfvuybt9IgYlI1yPc2UgPFt62UGK+cqUnSL51yebwMIdig3CPnuz23kevyi9ym9FpDPbMQIXzarM9apu8/9p/1Y+2zaDJPE+rUCaIRoTsVcV/CwawCOREjmVIrHjn6VshItPE3Fuxi7aln29k5akuhD1Rf0LNuGKzUU+v6eQ0MD9JOKYy8tSNowM5LwIDAQAB";
 
@@ -332,6 +348,140 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         cardView_eth_ghs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+        cardView_btc_brl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+        cardView_eth_brl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+
+        cardView_btc_ngn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+        cardView_eth_ngn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+
+        cardView_btc_thb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //parse both BTC & ETH value to ConvertionActivity
+                Intent intent = new Intent(getApplicationContext(), ConvertionActivity.class);
+                intent.putExtra("btc", BtcGetUsd);
+                intent.putExtra("eth", EthGetUSD);
+                startActivity(intent);
+                swipeRefreshLayout.setRefreshing(false);
+                mInterstitialAd = new InterstitialAd(getApplicationContext());
+                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mInterstitialAd.loadAd(adRequest);
+                mInterstitialAd.setAdListener(new AdListener() {
+                    public void onAdLoaded() {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        }
+                    }
+                });
+            }
+        });
+        cardView_eth_thb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //parse both BTC & ETH value to ConvertionActivity
@@ -600,20 +750,38 @@ public class MainActivity extends AppCompatActivity {
                     kes_selected = 0.00962;
                     gbp_selected = 1.31281;
                     ing_selected = 0.15040;
+                    brl_selected = 0.30903;
+                    thb_selected = 0.030;
                     double uu = (first_selected / second_selected) * 1;
                     btc_eur.setText("1 BTC : " + Utils.getCurrencySymbol("EUR") + df.format(uu));
 
 
                     double uuu = (first_selected1 / second_selected) * 1;
                     eth_eur.setText("1 ETH : " + Utils.getCurrencySymbol("EUR") + df.format(uuu));
-
-
+                    //nigeria
                     double ngn = (first_selected / second_selected1) * 1;
                     btc_ngn.setText("1 BTC : " + Utils.getCurrencySymbol("NGN") + df.format(ngn));
 
 
                     double ngneth = (first_selected1 / second_selected1) * 1;
                     eth_ngn.setText("1 ETH : " + Utils.getCurrencySymbol("NGN") + df.format(ngneth));
+
+                    //thiland
+                    double thb = (first_selected / thb_selected) * 1;
+                    btc_thb.setText("1 BTC : " + Utils.getCurrencySymbol("THB") + df.format(thb));
+
+
+                    double thbeth = (first_selected1 / thb_selected) * 1;
+                    eth_thb.setText("1 ETH : " + Utils.getCurrencySymbol("THB") + df.format(thbeth));
+
+                    //brazil
+                    double brl = (first_selected / brl_selected) * 1;
+                    btc_brl.setText("1 BTC : " + Utils.getCurrencySymbol("BRL") + df.format(brl));
+
+
+                    double brleth = (first_selected1 / brl_selected) * 1;
+                    eth_brl.setText("1 ETH : " + Utils.getCurrencySymbol("BRL") + df.format(brleth));
+
 
                     //Ghana
                     double ghs = (first_selected / ghs_selected) * 1;
@@ -791,7 +959,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             })
 
-                    .setNegativeButton(R.string.no_connection_found, new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             Toast.makeText(getApplicationContext(), R.string.settings_saved, Toast.LENGTH_LONG).show();
                             dialog.cancel();

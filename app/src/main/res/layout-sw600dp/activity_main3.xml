@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main3Activity">
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -19,6 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
         tools:context=".Main3Activity">
     <ImageView
         android:padding="10dp"
@@ -152,7 +153,8 @@
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>
-    </ScrollView>
+        </android.support.v7.widget.CardView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

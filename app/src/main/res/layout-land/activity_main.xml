@@ -66,7 +66,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="No Connection Found"
+                    android:text="@string/no_connection_found"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#1b0202"
@@ -81,7 +81,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Your connection to the wireless network is turned off. Restore your connections and swipe down to refresh"
+                    android:text="@string/your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#1b0202"
@@ -109,7 +109,7 @@
                     android:gravity="center_horizontal"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:text="Convert Offline"
+                    android:text="@string/convert_offline"
                     android:id="@+id/retry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -210,7 +210,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center_horizontal"
-                    android:text="Just Now"
+                    android:text="@string/just_now"
                     android:id="@+id/text1"
                     android:layout_width="match_parent"
                     android:layout_height="30dp" />
@@ -280,7 +280,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center_horizontal"
-                    android:text="Just Now"
+                    android:text="@string/just_now"
                     android:id="@+id/text2"
                     android:layout_width="match_parent"
                     android:layout_height="30dp" />
@@ -370,7 +370,7 @@
                         android:textSize="20sp"
                         android:textColor="#ffffff"
                         android:layout_gravity="center_horizontal"
-                        android:text="Just Now"
+                        android:text="@string/just_now"
                         android:layout_width="match_parent"
                         android:layout_height="30dp" />
                 </LinearLayout>
@@ -437,7 +437,7 @@
                         android:textSize="20sp"
                         android:textColor="#ffffff"
                         android:layout_gravity="center_horizontal"
-                        android:text="Just Now"
+                        android:text="@string/just_now"
                         android:layout_width="match_parent"
                         android:layout_height="30dp" />
 
@@ -447,7 +447,159 @@
         </LinearLayout>
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp">
 
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/brl_cardbtc"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BTC - BRL"
+                            android:textColor="#0a0a09"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:src="@drawable/btc_coin" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f5921a" />
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/btc_brl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:textAlignment="center" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f5921a" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textColor="#100d0d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/click_text"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:background="#f5921a"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/just_now"
+                            android:id="@+id/text5"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/brl_cardeth"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ETH - BRL"
+                            android:textColor="#0a0a09"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/eth_coin" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#8c2631"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/eth_brl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:textAlignment="center" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#8c2631" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textColor="#100d0d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/click_text"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:background="#8c2631"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/just_now"
+                            android:id="@+id/textbrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -525,8 +677,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
-                            android:id="@+id/text5"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -593,7 +744,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:id="@+id/text6"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
@@ -603,6 +754,166 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp">
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/thb_cardbtc"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BTC - THB"
+                            android:textColor="#0a0a09"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:src="@drawable/btc_coin" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f5921a" />
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/btc_thb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:textAlignment="center" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f5921a" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textColor="#100d0d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/click_text"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:background="#f5921a"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/just_now"
+                            android:id="@+id/text_thb"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/thb_cardeth"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ETH - THB"
+                            android:textColor="#0a0a09"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/eth_coin" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#8c2631"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/eth_thb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:textAlignment="center" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#8c2631" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textColor="#100d0d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/click_text"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:background="#8c2631"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/just_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -680,7 +991,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -747,7 +1058,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
 
@@ -837,7 +1148,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -903,7 +1214,8 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
+                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
 
@@ -991,7 +1303,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -1057,7 +1369,8 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
+                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
 
@@ -1145,7 +1458,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -1212,7 +1525,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
 
@@ -1300,7 +1613,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
                     </LinearLayout>
@@ -1367,7 +1680,7 @@
                             android:textSize="20sp"
                             android:textColor="#ffffff"
                             android:layout_gravity="center_horizontal"
-                            android:text="Just Now"
+                            android:text="@string/just_now"
                             android:layout_width="match_parent"
                             android:layout_height="30dp" />
 

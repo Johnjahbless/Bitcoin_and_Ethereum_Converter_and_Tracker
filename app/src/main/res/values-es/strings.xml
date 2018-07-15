@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">comienzo</string>
+    <string name="about">"La aplicación para Android Bitcoin / Ethereum Tracker y convertidor rastrea los precios de Bitcoin y Ethereum Exchange en tiempo real y muestra los resultados del precio en $ y la moneda local deseada. La aplicación Bitcoin y Ethereum también le permite convertir el precio de intercambio de Bitcoin y Ethereum a su moneda local deseada en función del precio de cambio estándar actual en ese momento y también convertir Bitcoin y Ethereum sin conexión con la conexión de datos. ¡rapido y facil!  BTC y ETH sin conexión sin ayuda de conexión de datos;      (1) Ingrese un valor de 1 BTC / ETH en US $ (se ha presentado un valor predeterminado).      (2) El valor predeterminado es del precio de Exchange anterior cargado.      (3) Ingrese la cantidad de BTC / ETH que desea convertir       (4) Seleccione Bitcoin si está convirtiendo Bitcoin o Ethereum para la conversión en Ethereum.      (5) Seleccione Calcular BTC para Bitcoin o Calcular ETH para Ethereum y su conversión esté completa (Asegúrese de seleccionar Bitcoin o Ethereum Before conversion).      (6) Seleccione su moneda de deseo. Permitir que las notificaciones reciban siempre alertas en tiempo real sobre el aumento de los precios de Bitcoin y Ethereum. Si desea agregar una moneda local del país o si el precio de cambio de moneda local de su país no figura en la lista, envíenos un comentario con el nombre de su país y el nombre de la moneda local y lo agregaremos.  "</string>
+    <string name="rate">Calificar aplicacion</string>
+    <string name="retriving">Recuperando los últimos precios de intercambio BTC / ETH</string>
+    <string name="exitApplication">Salir de la aplicación</string>
+    <string name="exit">Salir de la aplicación</string>
+    <string name="click_help">Haga clic en la ayuda a continuación para obtener más información</string>
+    <string name="help_short">Ayuda</string>
+    <string name="can_now_convert">Ahora puede convertir BTC / ETH sin conexión sin conexión de datos</string>
+    <string name="ok">Bueno</string>
+    <string name="offline_title">BTC y ETH sin conexión sin ayuda de conexión de datos;</string>
+    <string name="offline_help">(1). Ingrese un valor de 1 BTC / ETH en US $ (se ha presentado un valor predeterminado).   \n
+        (2). El valor predeterminado es del precio de Exchange anterior cargado. \n
+        (3). Ingrese la cantidad de BTC / ETH que desea convertir \n
+        (4). Seleccione Bitcoin si está convirtiendo Bitcoin o Ethereum para la conversión en Ethereum. \n
+        (5). Seleccione Calcular BTC para Bitcoin o Calcular ETH para Ethereum y su conversión esté completa (Asegúrese de seleccionar Bitcoin o Ethereum Before conversion).  \n
+        (6). Seleccione su moneda de deseo.</string>
+    <string name="start_conversion_below">Comience a convertir a continuación</string>
+    <string name="convert_offline">Convierte sin conexión</string>
+    <string name="just_now">Justo ahora</string>
+    <string name="share">Compartir</string>
+    <string name="wait">Por favor espera ...</string>
+    <string name="about_menu">Sobre el</string>
+    <string name="remove_ads">Quitar anuncios</string>
+    <string name="rate_app">Calificar aplicacion</string>
+    <string name="exit_app">Salir de la aplicación</string>
+    <string name="help">Ayuda</string>
+    <string name="bitcoin_ethereum_news">Noticias de Bitcoin / Ethereum</string>
+    <string name="offline">Convierte sin conexión</string>
+    <string name="feedback">Comentarios</string>
+    <string name="converter">" convertidor"</string>
+    <string name="tracker">Rastreador</string>
+    <string name="and">y</string>
+    <string name="convert">Convertir</string>
+    <string name="to">A</string>
+    <string name="from">De</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">Por favor su vez en su red de datos y actualizar</string>
+    <string name="no_connection_found">No hay conexión encontrado</string>
+    <string name="swipe_down">Deslice hacia abajo para actualizar</string>
+    <string name="googleplaystore">La tasa de Estados Unidos en Google playstore</string>
+    <string name="settings_saved">La configuración de Guardado</string>
+    <string name="notifications_allow">Permitir notificaciones para todos los días bitcoin / ethereum precios</string>
+</resources>

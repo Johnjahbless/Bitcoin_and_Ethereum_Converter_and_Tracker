@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.koloapps.contest.cryptocomparecurrencyconverter.Main2Activity">
+
+    <android.support.v7.widget.CardView
+android:id="@+id/card"
+        android:layout_above="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp">
+          <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:lineSpacingExtra="5sp"
+                android:textSize="18sp"
+                  android:id="@+id/text"
+                   android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:textColor="#1b0202"
+                android:typeface="serif"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about" />
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_above="@+id/adView"
+        android:id="@+id/feedback"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/feedback"
+        android:padding="15dp"
+        android:textColor="#ffffff"
+        android:background="@color/btcColor"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+       <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3517746418699749/5415292728">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+
+
+

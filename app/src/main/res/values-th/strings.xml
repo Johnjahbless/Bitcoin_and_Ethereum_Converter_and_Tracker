@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">เริ่มต้น</string>
+    <string name="about"> <b> Bitcoin / Ethereum Tracker และ Conversion Android App ติดตาม Bitcoin และ Ethereum Exchange ในราคาเรียลไทม์และแสดงผลลัพธ์ราคาเป็นสกุลเงินดอลลาร์และสกุลเงินท้องถิ่นที่คุณต้องการ          
+        Bitcoin และ Ethereum App ยังช่วยให้คุณสามารถแปลงสกุลเงินของ Bitcoin และ Ethereum ไปเป็นสกุลเงินท้องถิ่นที่คุณต้องการได้โดยขึ้นอยู่กับอัตราแลกเปลี่ยนปัจจุบันในขณะนั้น   อนุญาตการแจ้งเตือนให้รับการแจ้งเตือนเรียลไทม์เสมอเมื่อมีการเพิ่มขึ้นของราคา
+        Bitcoin และ Ethereum  หากคุณต้องการเพิ่มสกุลเงินในประเทศของประเทศหรือหากราคาของสกุลเงินในประเทศของคุณไม่อยู่ในรายการ  โปรดส่งความคิดเห็นด้วยชื่อประเทศและชื่อสกุลเงินท้องถิ่นของคุณและเราจะเพิ่มข้อมูลดังกล่าว  ช่วยในการแปลง    
+         BTC และ ETH แบบออฟไลน์โดยไม่มีการเชื่อมต่อข้อมูล \n         
+        (1) ป้อนค่า 1 BTC / ETH เป็น US $ (มีการนำเสนอค่าเริ่มต้น)  \n        
+        (2) ค่าดีฟอลต์คือจากราคาของ Exchange ก่อนหน้าที่โหลด      \n    
+        (3) ป้อนจำนวน BTC / ETH ที่คุณต้องการแปลง    \n      
+        (4) เลือก Bitcoin หากคุณกำลังแปลงเป็น Bitcoin หรือ Ethereum สำหรับการแปลงค่าใน Ethereum  \n        
+        (5) เลือกคำนวณ BTC for Bitcoin หรือคำนวณ ETH สำหรับ Ethereum และการแปลงของคุณเสร็จสมบูรณ์ (โปรดเลือก Bitcoin หรือ Ethereum Before conversion) \n         
+        (6) เลือกสกุลเงินของคุณ </b> </string>
+    <string name="notifications_allow">อนุญาตให้มีการแจ้งเตือนสำหรับ Bitcoin / Ethereum ทุกวันได้หรือไม่?m</string>
+    <string name="settings_saved">บันทึกการตั้งค่าแล้ว</string>
+    <string name="rate">อัตรา</string>
+    <string name="retriving">กำลังเรียกราคาล่าสุดของ BTC / ETH Exchange</string>
+    <string name="wait" translatable="false">โปรดรอ ....</string>
+    <string name="exitApplication">ออกจากแอพพลิเคชั่น?</string>
+    <string name="googleplaystore">ให้คะแนนเราทาง Google Play สโตร์!</string>
+    <string name="exit">ทางออก</string>
+    <string name="click_help">คลิก ช่วย เพื่อเรียนรู้เพิ่มเติม</string>
+    <string name="help_short">ช่วย</string>
+    <string name="can_now_convert">ขณะนี้คุณสามารถแปลง BTC / ETH แบบออฟไลน์โดยไม่มีการเชื่อมต่อข้อมูล</string>
+    <string name="swipe_down">กวาดลงเพื่อรีเฟรช</string>
+    <string name="yes">ใช่</string>
+    <string name="no">กว่า</string>
+    <string name="ok">ตกลง</string>
+    <string name="offline_title">การแปลง Bitcoin / Ethereum วิธีใช้แบบออฟไลน์</string>
+    <string name="offline_help">(1) ป้อนค่า 1 BTC / ETH เป็น US $ (มีการนำเสนอค่าเริ่มต้น)   (2) ค่าดีฟอลต์คือจากราคาของ Exchange ก่อนหน้าที่โหลด   (3) ป้อนจำนวน BTC / ETH ที่คุณต้องการแปลง   (4) เลือก Bitcoin หากคุณกำลังแปลงเป็น Bitcoin หรือ Ethereum สำหรับการแปลงค่าใน Ethereum   (5) เลือกคำนวณ BTC for Bitcoin หรือคำนวณ ETH สำหรับ Ethereum และการแปลงของคุณเสร็จสมบูรณ์ (โปรดเลือก Bitcoin หรือ Ethereum Before conversion)   (6) เลือกสกุลเงินของคุณ</string>
+    <string name="start_conversion_below">เริ่มการแปลงด้านล่าง</string>
+    <string name="no_connection_found">ไม่พบการเชื่อมต่อ</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">การเชื่อมต่อกับเครือข่ายไร้สายถูกปิดอยู่ กู้คืนการเชื่อมต่อของคุณและปัดลงเพื่อรีเฟรช</string>
+    <string name="convert_offline">แปลงออฟไลน์</string>
+    <string name="just_now">แค่นี้</string>
+    <string name="share">หุ้น</string>
+    <string name="notifications">การแจ้งเตือน</string>
+    <string name="about_menu">เกี่ยวกับ</string>
+    <string name="remove_ads">ลบโฆษณา</string>
+    <string name="rate_app">ให้คะแนน App</string>
+    <string name="exit_app">ออกจากแอป</string>
+    <string name="help">ช่วย</string>
+    <string name="bitcoin_ethereum_news">ข่าว Bitcoin / Ethereum</string>
+    <string name="offline">แปลงออฟไลน์</string>
+    <string name="feedback">ข้อเสนอแนะ</string>
+    <string name="converter">แปลง</string>
+    <string name="tracker">ติดตาม</string>
+    <string name="and"><![CDATA[&]]></string>
+    <string name="convert">แปลง</string>
+    <string name="from">จาก</string>
+    <string name="to">มัน</string>
+</resources>

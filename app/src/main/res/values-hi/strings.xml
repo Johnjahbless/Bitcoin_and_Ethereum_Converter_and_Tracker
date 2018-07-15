@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="wait">कृपया प्रतीक्षा करें ....</string>
+    <string name="click_text">प्रारंभ</string>
+    <string name="about">"बिटकॉइन / एथेरियम ट्रैकर और कनवर्टर एंड्रॉइड ऐप रीयलटाइम में बिटकोइन और एथेरियम एक्सचेंज की कीमतों को ट्रैक करता है और मूल्य के परिणाम $ और आपकी वांछित स्थानीय मुद्रा प्रदर्शित करता है। बिटकॉइन और एथेरियम ऐप आपको उस समय वर्तमान मानक विनिमय मूल्य के आधार पर बिटकॉइन और एथेरियम विनिमय मूल्य को आपकी वांछित स्थानीय मुद्रा में परिवर्तित करने की अनुमति देता है और डेटा कनेक्शन के साथ बिटकोइन और एथेरियम ऑफ़लाइन भी परिवर्तित करता है। तेज़ और आसान!  डेटा कनेक्शन सहायता के बिना बीटीसी और ईटीएच ऑफ़लाइन; -      (1)। यूएस $ में 1 बीटीसी / ईटीएच का मूल्य दर्ज करें (एक डिफ़ॉल्ट मान प्रस्तुत किया गया है)।      (2)। डिफ़ॉल्ट मान पिछले एक्सचेंज मूल्य से लोड किया गया है।      (3)। बीटीसी / ईटीएच की मात्रा दर्ज करें जिसे आप कन्वर्ट करना चाहते हैं \"+      (4)। यदि आप एटरेरम में रूपांतरण के लिए बिटकोइन या एथेरियम के लिए परिवर्तित कर रहे हैं तो बिटकॉइन का चयन करें।      (5)। बिटकॉइन के लिए बीटीसी की गणना करें या एथेरियम के लिए ईटीएच की गणना करें और आपका रूपांतरण पूरा हो गया है (सुनिश्चित करें कि आप रूपांतरण से पहले बिटकॉइन या एथेरियम का चयन करें)।      (6)। अपनी इच्छा मुद्रा का चयन करें। अधिसूचना को बिटकोइन और एथेरियम की कीमतों में वृद्धि पर हमेशा रीयलटाइम अलर्ट प्राप्त करने दें। यदि आप एक देश स्थानीय मुद्रा जोड़ना चाहते हैं या यदि आपके देश की स्थानीय मुद्रा विनिमय मूल्य सूचीबद्ध नहीं है, तो कृपया हमें अपने देश के नाम और स्थानीय मुद्रा नाम के साथ एक प्रतिक्रिया भेजें और हम इसे जोड़ देंगे। "</string>
+    <string name="rate">एप्लिकेशन का मूल्यांकन करें</string>
+    <string name="retriving">नवीनतम बीटीसी / ईटीएच विनिमय मूल्यों को पुनः प्राप्त करना</string>
+    <string name="exitApplication">बाहर निकलें ऐप</string>
+    <string name="exit">बाहर निकलें ऐप</string>
+    <string name="click_help">अधिक जानने के लिए नीचे दी गई सहायता पर क्लिक करें</string>
+    <string name="help_short">मदद</string>
+    <string name="can_now_convert">आप कर सकते हैं अब कन्वर्ट बीटीसी / eth ऑफलाइन बिना डेटा कनेक्शन</string>
+    <string name="ok">ठीक है</string>
+    <string name="offline_title">" डेटा कनेक्शन सहायता के बिना बीटीसी और ईटीएच ऑफ़लाइन; "</string>
+    <string name="offline_help">(1)। यूएस $ में 1 बीटीसी / ईटीएच का मूल्य दर्ज करें (एक डिफ़ॉल्ट मान प्रस्तुत किया गया है)।  \n
+        (2)। डिफ़ॉल्ट मान पिछले एक्सचेंज मूल्य से लोड किया गया है।    \n
+        (3)। बीटीसी / ईटीएच की मात्रा दर्ज करें जिसे आप कन्वर्ट करना चाहते हैं \n
+        (4)। यदि आप एटरेरम में रूपांतरण के लिए बिटकोइन या एथेरियम के लिए परिवर्तित कर रहे हैं तो बिटकॉइन का चयन करें।    \n
+        (5)। बिटकॉइन के लिए बीटीसी की गणना करें या एथेरियम के लिए ईटीएच की गणना करें और आपका रूपांतरण पूरा हो गया है (सुनिश्चित करें कि आप रूपांतरण से पहले बिटकॉइन या एथेरियम का चयन करें)।    \n
+        (6)। अपनी इच्छा मुद्रा का चयन करें। </string>
+    <string name="start_conversion_below">नीचे कनवर्ट करना प्रारंभ करें</string>
+    <string name="convert_offline">ऑफ़लाइन कनवर्ट करें</string>
+    <string name="just_now">अभी</string>
+    <string name="share">शेयर</string>
+    <string name="about_menu">के बारे में</string>
+    <string name="remove_ads">विज्ञापन हटाएँ</string>
+    <string name="rate_app">एप्लिकेशन का मूल्यांकन करें</string>
+    <string name="exit_app">बाहर निकलें ऐप</string>
+    <string name="help">मदद</string>
+    <string name="bitcoin_ethereum_news">बिटकोइन / एथेरियम समाचार</string>
+    <string name="offline">ऑफ़लाइन कनवर्ट करें</string>
+    <string name="converter">कनवर्टर</string>
+    <string name="tracker">ट्रैकर</string>
+    <string name="and">और</string>
+    <string name="convert">बदलना</string>
+    <string name="to">के लिए</string>
+    <string name="from">से</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">चालू करें अपने डेटा नेटवर्क और सुची | ताज़ा करे</string>
+    <string name="no_connection_found">कोई संबंध नहीं है पाया</string>
+    <string name="no">नहीं</string>
+    <string name="yes">हाँ</string>
+    <string name="swipe_down">नीचे स्वाइप करें ताज़ा करने के लिए</string>
+    <string name="googleplaystore">दर गूगल पर हमें playstore</string>
+    <string name="settings_saved">सेटिंग्स में ढूंढें सहेजी गयी</string>
+    <string name="notifications_allow">सूचनाओं की अनुमति दें के लिए दैनिक bitcoin / ethereum कीमतों</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">Начало</string>
+    <string name="about">"Bitcoin / Ethereum Tracker и конвертер Android App отслеживает цены на биткойн и Ethereum Exchange в реальном времени и отображает результаты цены в $ и желаемую местную валюту. Bitcoin и Ethereum App также позволяют конвертировать биржевую цену Bitcoin и Ethereum в желаемую местную валюту на основе текущей стандартной цены обмена в то время, а также конвертировать Bitcoin и Ethereum в автономном режиме с использованием данных. быстро и легко!  BTC и ETH Offline без помощи подключения к данным -      (1). Введите значение 1 BTC / ETH в долларах США (значение по умолчанию было представлено).      (2). Значение по умолчанию - от предыдущей цены Exchange.      (3). Введите сумму BTC / ETH, которую вы хотите конвертировать \"+      (4). Выберите Bitcoin, если вы конвертируете Bitcoin или Ethereum для преобразования в Ethereum.      (5). Выберите Calculate BTC для биткойнов или вычислите ETH для Ethereum, и ваше преобразование завершено (убедитесь, что вы выбрали Bitcoin или Ethereum перед конверсией).      (6). Выберите валюту желаемого. Разрешить уведомление всегда получать оповещения в реальном времени о повышении цен Bitcoin и Ethereum. Если вы хотите добавить местную валюту страны или если в местной валюте не указана местная валюта, отправьте нам отзыв с именем вашей страны и названием местной валюты, и мы добавим его. "</string>
+    <string name="rate">Оценить приложение</string>
+    <string name="retriving">Получение последних обменных курсов BTC / ETH</string>
+    <string name="exitApplication">Exit App</string>
+    <string name="exit">Exit App</string>
+    <string name="click_help">Нажмите кнопку «Справка» ниже, чтобы узнать больше</string>
+    <string name="wait">Пожалуйста, подождите ...</string>
+    <string name="help_short">Помогите</string>
+    <string name="can_now_convert">Теперь вы можете конвертировать BTC / ETH в автономном режиме без подключения к данным</string>
+    <string name="ok">Хорошо</string>
+    <string name="offline_title">" BTC и ETH Offline без помощи подключения к данным "</string>
+    <string name="offline_help">(1). Введите значение 1 BTC / ETH в долларах США (значение по умолчанию было представлено).   \n
+        (2). Значение по умолчанию - от предыдущей цены Exchange.   \n
+        (3). Введите сумму BTC / ETH, которую вы хотите конвертировать    \n
+        (4). Выберите Bitcoin, если вы конвертируете Bitcoin или Ethereum для преобразования в Ethereum. \n
+        (5). Выберите Calculate BTC для биткойнов или вычислите ETH для Ethereum, и ваше преобразование завершено (убедитесь, что вы выбрали Bitcoin или Ethereum перед конверсией).  \n
+        (6). Выберите валюту желаемого. "</string>
+    <string name="start_conversion_below">Начать преобразование ниже</string>
+    <string name="convert_offline">Конвертировать офлайн</string>
+    <string name="just_now">Прямо сейчас</string>
+    <string name="share">Поделиться</string>
+    <string name="about_menu">Около</string>
+    <string name="remove_ads">Убрать рекламу</string>
+    <string name="rate_app">Оценить приложение</string>
+    <string name="exit_app">Exit App</string>
+    <string name="help">Помогите</string>
+    <string name="bitcoin_ethereum_news">Bitcoin / ethereum Новости</string>
+    <string name="offline">Конвертировать офлайн</string>
+    <string name="converter">конвертер</string>
+    <string name="tracker">Трекер</string>
+    <string name="and">и</string>
+    <string name="convert">Конвертировать</string>
+    <string name="to">На</string>
+    <string name="from">От</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="notifications">Уведомления</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">Пожалуйста, включите ваши данные сети и обновить</string>
+    <string name="no_connection_found">Никакой связи найдено</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="swipe_down">Проведите вниз, чтобы обновить</string>
+    <string name="googleplaystore">Ставка за нами на Google playstore</string>
+    <string name="settings_saved">Настройки сохраняются</string>
+    <string name="notifications_allow">Позволяют уведомления для ежедневного bitcoin / ethereum цены</string>
+</resources>

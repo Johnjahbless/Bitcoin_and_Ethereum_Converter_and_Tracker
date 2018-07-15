@@ -44,7 +44,7 @@ public class ConvertionActivity extends AppCompatActivity {
             "SGD - Singapore Dollar", "CHF - Swiss Frame", "MYR - Malaysian Riggit", "JPY - Japanese Yen",
             "CNY - Chinese Yuan Renminbi", "NZD - New Zealand Dollar", "ZAR - South Africa Rand", "BRL - Brazilian Real",
             "SAR - Saudi Arabian Riyal", "KES - Kenyan Shilling", "KRW - South Korean Won", "GHS - Ghanaian Cedi",
-            "ARS - Argentine Peso", "RUB - Russian Ruble"};
+            "ARS - Argentine Peso", "RUB - Russian Ruble", "THAI BAHT - Thailand"};
 
     //defined variable for spinner selected value
     double first_selected, second_selected;
@@ -248,7 +248,12 @@ public class ConvertionActivity extends AppCompatActivity {
                     second_selected = 0.01719;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("RUB") + df.format(uu));
+                }  else if (sel == "THAI BAHT - Thailand") {
+                    second_selected = 0.030;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
                 }
+
 
 
             }

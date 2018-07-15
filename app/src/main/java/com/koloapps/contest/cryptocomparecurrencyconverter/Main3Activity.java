@@ -44,7 +44,7 @@ public class Main3Activity extends AppCompatActivity {
             "SGD - Singapore Dollar", "CHF - Swiss Frame", "MYR - Malaysian Riggit", "JPY - Japanese Yen",
             "CNY - Chinese Yuan Renminbi", "NZD - New Zealand Dollar", "ZAR - South Africa Rand", "BRL - Brazilian Real",
             "SAR - Saudi Arabian Riyal", "KES - Kenyan Shilling", "KRW - South Korean Won", "GHS - Ghanaian Cedi",
-            "ARS - Argentine Peso", "RUB - Russian Ruble"};
+            "ARS - Argentine Peso", "RUB - Russian Ruble", "THAI BAHT - Thailand"};
 
     //defined variable for spinner selected value
     double first_selected, second_selected;
@@ -102,7 +102,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
         if (BtcGetUsd == 0.00) {
-            getBTC.setText("9734");
+            getBTC.setText("6334");
         }else {
             getBTC.setText(df.format(uuuu));
         }
@@ -136,7 +136,7 @@ public class Main3Activity extends AppCompatActivity {
                     //get Spinner selected item value
                     first_selected = ETHget;
                     if (EthGetUSD == 0.00) {
-                        getBTC.setText("789");
+                        getBTC.setText("444");
                     }else {
                         getBTC.setText(df.format(uuuu));
                     }
@@ -153,7 +153,7 @@ public class Main3Activity extends AppCompatActivity {
                 } if (pos == 1) {
                     first_selected = ETHget;
                     if (EthGetUSD == 0.00) {
-                        getBTC.setText("789");
+                        getBTC.setText("444");
                     }else {
                         getBTC.setText(df.format(uuuu));
                     }
@@ -173,7 +173,7 @@ public class Main3Activity extends AppCompatActivity {
                     //get Spinner selected item value
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
-                        getBTC.setText("9739.12");
+                        getBTC.setText("6330.97");
                     } else{
                         getBTC.setText(df.format(uuu));
                     }
@@ -190,7 +190,7 @@ public class Main3Activity extends AppCompatActivity {
                 } if (pos == 3) {
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
-                        getBTC.setText("9739.12");
+                        getBTC.setText("6330.97");
                     } else{
                         getBTC.setText(df.format(uuu));
                     }
@@ -317,10 +317,15 @@ public class Main3Activity extends AppCompatActivity {
                     second_selected = 0.01719;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("RUB") + df.format(uu));
-                }
-
-
+                } else if (sel == "THAI BAHT - Thailand") {
+                second_selected = 0.030;
+                double uu = (first_selected / second_selected) * getText;
+                second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
             }
+
+
+
+        }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -518,7 +523,7 @@ public class Main3Activity extends AppCompatActivity {
                                 }
                             })
 
-                    .setNegativeButton(R.string.no_connection_found, new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             Toast.makeText(getApplicationContext(), R.string.settings_saved, Toast.LENGTH_LONG).show();
                             dialog.cancel();

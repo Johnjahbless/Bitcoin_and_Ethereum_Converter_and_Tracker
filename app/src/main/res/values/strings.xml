@@ -6,7 +6,7 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
-    <string name="about"><b>  Bitcoin/Ethereum Tracker and converter Android App tracks Bitcoin and Ethereum Exchange prices in realtime and displays the price results in $ and your desired local currency. \n
+    <string name="about"> <b>  Bitcoin/Ethereum Tracker and converter Android App tracks Bitcoin and Ethereum Exchange prices in realtime and displays the price results in $ and your desired local currency. \n
         Bitcoin and Ethereum App also allows you to convert Bitcoin and Ethereum exchange price to your desired local currency based on the current standard exchange price at that time.\n  Allow notification to always received realtime alerts on increase of Bitcoin and Ethereum prices. \n If you wish to add a country local currency or if your country\'s local currency exchange price is not listed, \n please do send us a feedback with your country name and local currency name and we will add it. \n Help n how to convert
     BTC and ETH Offline without data connection \n
         (1). Enter a value of 1 BTC/ETH in US$ (A default value has been presented) \n
@@ -22,7 +22,7 @@
     <string name="settings_saved">Settings Saved</string>
     <string name="rate">Rate</string>
     <string name="retriving">"Retriving Latest BTC/ETH Exchange Price"</string>
-    <string name="wait" translatable="false">Please wait....</string>
+    <string name="wait">Please wait....</string>
     <string name="exitApplication">Exit Application?</string>
     <string name="googleplaystore">Rate us on Googleplaystore!</string>
     <string name="exit">Exit</string>
