@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:onClick="clear"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".Main4Activity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="#ffffff"
+        tools:context=".Main4Activity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                tools:context=".Main4Activity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="?android:buttonBarButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:onClick="witdraw"
+                        android:text="@string/withdraw"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:onClick="setup"
+                        style="?android:buttonBarButtonStyle"
+                        android:text="@string/setup_wallet"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:onClick="round"
+                        android:id="@+id/circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="0.000001"
+                        android:textColor="#f3050500"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_marginTop="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/circle"
+                        android:id="@+id/countertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#f3050500"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textmine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/mining_started"
+                    android:textAlignment="center"
+                    android:textColor="#2b2900"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal">
+
+
+
+
+                    <android.support.v7.widget.CardView
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:onClick="card2">
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/raw1"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/stage2">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimary"
+                                android:padding="6dp"
+                                android:text="@string/_300"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="1dp"
+                                android:padding="6dp"
+                                android:text="@string/tap_to_mine_btc"
+                                android:textAlignment="center"
+                                android:textColor="#f3050500"
+                                android:textSize="15sp"
+                                android:textStyle="bold|normal" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/cardView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:onClick="card3">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/stage3">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimary"
+                                android:padding="6dp"
+                                android:text="@string/_350"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="1dp"
+                                 android:padding="6dp"
+                                android:text="@string/tap_to_mine_btc"
+                                android:textAlignment="center"
+                                android:textColor="#f3050500"
+                                android:textSize="15sp"
+                                android:textStyle="bold|normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/cardView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:onClick="card4">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/stage4">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimary"
+                                android:padding="6dp"
+                                android:text="@string/_400"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="1dp"
+                                android:padding="6dp"
+                                android:text="@string/tap_to_mine_btc"
+                                android:textAlignment="center"
+                                android:textColor="#f3050500"
+                                android:textSize="15sp"
+                                android:textStyle="bold|normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+<FrameLayout
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/walletID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:layerType="hardware"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp">
+
+
+                    <EditText
+                        android:inputType="text"
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/enter_wallet_address">
+
+                    </EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:onClick="save"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+</FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardWitdraw"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/banner" />
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/banner"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/withdraw_bitcoin"
+                            android:textColor="@color/ethColor"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold"
+                            android:textColor="@color/ethColor"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you"
+                            android:textColor="#2b2900"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/linear"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="10dp"
+                            android:onClick="dismis"
+                            android:text="@string/dismis"
+                            android:textColor="#2b2900"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textwithdraw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:onClick="withdrwaBTC"
+                            android:text="@string/withdraws"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            </FrameLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3517746418699749/2253806018">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+</LinearLayout>

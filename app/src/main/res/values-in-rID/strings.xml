@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">MULAI</string>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="about"> <b> Bitcoin / Ethereum Tracker dan konverter Aplikasi Android melacak harga Bitcoin dan Ethereum Exchange secara realtime dan menampilkan hasil harga dalam $ dan mata uang lokal yang Anda inginkan. \ n
+        Aplikasi Bitcoin dan Ethereum juga memungkinkan Anda untuk mengkonversi harga pertukaran Bitcoin dan Ethereum ke mata uang lokal yang Anda inginkan berdasarkan pada harga pertukaran standar saat ini. \ N Izinkan pemberitahuan untuk selalu menerima pemberitahuan waktu nyata tentang peningkatan harga Bitcoin dan Ethereum. \ n Jika Anda ingin menambahkan mata uang lokal suatu negara atau jika nilai tukar mata uang lokal negara Anda tidak terdaftar, \ n silakan kirimkan umpan balik dengan nama negara Anda dan nama mata uang lokal dan kami akan menambahkannya. \ n Bantuan n cara mengonversi
+    BTC dan ETH Offline tanpa koneksi data \ n
+        (1). Masukkan nilai 1 BTC / ETH dalam US $ (Nilai default telah disajikan) \ n
+        (2). Nilai default adalah dari harga Exchange sebelumnya yang dimuat \ n
+        (3). Masukkan jumlah BTC / ETH yang ingin Anda konversikan \ n
+        (4). Pilih Bitcoin jika Anda berkonversi untuk Bitcoin atau Ethereum untuk Konversi di Ethereum \ n
+        (5). Pilih Hitung BTC untuk Bitcoin atau Hitung ETH untuk Ethereum dan konversi Anda selesai (Pastikan Anda memilih Bitcoin atau Ethereum Sebelum konversi) \ n
+        (6). Pilih mata uang keinginan Anda</b></string>
+
+    <string name="notifications_allow">
+        Izinkan Notifikasi Untuk Harga Bitcoin / Ethereum Harian?
+    </string>
+    <string name="settings_saved">Pengaturan Tersimpan</string>
+    <string name="rate">Menilai</string>
+    <string name="retriving">"Mengambil Harga BTC / ETH Exchange Terbaru"</string>
+    <string name="wait">Mohon tunggu....</string>
+    <string name="waitt">Mohon tunggu....</string>
+    <string name="exitApplication">Aplikasi Keluar?</string>
+    <string name="googleplaystore">Beri kami nilai di Google Play Store!</string>
+    <string name="exit">Keluar</string>
+    <string name="click_help">Klik Bantuan untuk mempelajari lebih lanjut</string>
+    <string name="help_short">Membantu</string>
+    <string name="can_now_convert">Anda sekarang dapat mengkonversi BTC / ETH offline tanpa koneksi data</string>
+    <string name="swipe_down">Gesek ke bawah untuk Segarkan</string>
+    <string name="yes">iya nih</string>
+    <string name="no">Tidak</string>
+    <string name="ok">baik</string>
+    <string name="offline_title">
+        Konversi Bantuan Offline Bitcoin / Ethereum
+    </string>
+    <string name="offline_help">
+        (1). Masukkan nilai 1 BTC / ETH dalam US $ (Nilai default telah disajikan) \ n
+         (2). Nilai default adalah dari harga Exchange sebelumnya yang dimuat \ n
+         (3). Masukkan jumlah BTC / ETH yang ingin Anda konversikan \ n
+         (4). Pilih Bitcoin jika Anda berkonversi untuk Bitcoin atau Ethereum untuk Konversi di Ethereum \ n
+         (5). Pilih Hitung BTC untuk Bitcoin atau Hitung ETH untuk Ethereum dan konversi Anda selesai (Pastikan Anda memilih Bitcoin atau Ethereum Sebelum konversi) \ n
+         (6). Pilih mata uang keinginan Anda \ n
+    </string>
+    <string name="start_conversion_below">Mulai Konversi di bawah ini</string>
+    <string name="_1_btc" translatable="false">1 BTC ($):</string>
+    <string name="no_connection_found">Tidak Ada Koneksi Ditemukan</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">Koneksi Anda ke jaringan nirkabel dimatikan. Pulihkan koneksi Anda dan geser ke bawah untuk menyegarkan</string>
+    <string name="convert_offline">Konversi Offline</string>
+    <string name="btc_usd" translatable="false">BTC - USD</string>
+    <string name="just_now">Baru saja</string>
+    <string name="eth_usd" translatable="false">ETH - USD</string>
+    <string name="share">Bagikan</string>
+    <string name="notifications">Notifikasi</string>
+    <string name="about_menu">Tentang</string>
+    <string name="remove_ads">Hilangkan iklan</string>
+    <string name="rate_app">Beri Nilai Aplikasi</string>
+    <string name="exit_app">Keluar dari Aplikasi</string>
+    <string name="help">Membantu</string>
+    <string name="bitcoin_ethereum_news">Berita Bitcoin / Ethereum</string>
+    <string name="offline">Konversi offline</string>
+    <string name="feedback">umpan balik</string>
+    <string name="converter">Konverter</string>
+    <string name="tracker">Pelacak</string>
+    <string name="and"><![CDATA[&]]></string>
+    <string name="convert">Mengubah</string>
+    <string name="from">Dari</string>
+    <string name="to">Untuk</string>
+
+
+    <string name="withdraw">Menarik</string>
+    <string name="setup_wallet">Siapkan Wallet</string>
+    <string name="mining_started">Penambangan dimulai ......tetap terhubung</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">Ketuk untuk menambang BTC</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">Masukkan alamat dompet</string>
+    <string name="save">Menyimpan</string>
+    <string name="withdraw_bitcoin">Tarik Bitcoin .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">Anda dapat menarik Bitcoin ketika Anda mencapai ambang 0,004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">Pembayaran ke alamat dompet Anda akan membutuhkan waktu maksimum 3 hari untuk tiba, pastikan Anda memasukkan alamat bitcoin Anda yang benar, kami tidak akan bertanggung jawab atas kegagalan apa pun. Terima kasih</string>
+    <string name="dismis">Memberhentikan</string>
+    <string name="withdraws">Menarik</string>
+    <string name="sending_data">Mengirim Data</string>
+    <string name="mining_stopped">Penambangan berhenti</string>
+    <string name="not_connectd">Anda tidak terhubung</string>
+    <string name="turn_on">Silakan aktifkan koneksi data Anda dan coba lagi</string>
+    <string name="retryy">Mencoba kembali</string>
+    <string name="wallet">Silakan masukkan alamat dompet</string>
+    <string name="threashold">Maaf, Anda belum mencapai ambang Anda</string>
+    <string name="notmining">Anda tidak menambang Bitcoin.</string>
+    <string name="miningfail">Penambangan gagal, coba lagi dalam 2 menit</string>
+    <string name="btcincrese">Nilai Bitcoin meningkat</string>
+    <string name="mine_bitcoin">Tambang Bitcoin</string>
+    <string name="available">Bitcoin mining now available</string>
+</resources>

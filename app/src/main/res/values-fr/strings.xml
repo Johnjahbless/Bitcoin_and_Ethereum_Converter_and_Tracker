@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">DÉBUT</string>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="about"> <b>  Bitcoin / Ethereum Tracker et convertisseur Android App suit les prix Bitcoin et Ethereum Exchange en temps réel et affiche les résultats des prix en $ et votre monnaie locale souhaitée. \ n
+        Bitcoin et Ethereum App vous permet également de convertir le prix d'échange Bitcoin et Ethereum dans la devise locale désirée en fonction du prix d'échange standard actuel. \ N Autoriser la notification aux alertes en temps réel toujours reçues sur l'augmentation des prix Bitcoin et Ethereum. \ n Si vous souhaitez ajouter une devise locale du pays ou si le prix de change de votre pays n'est pas indiqué, \ n veuillez nous envoyer un commentaire avec votre nom de pays et votre devise locale et nous l'ajouterons. \ n Aide n comment convertir
+    BTC et ETH Hors ligne sans connexion de données \ n
+        (1). Entrez une valeur de 1 BTC / ETH en US $ (Une valeur par défaut a été présentée) \ n
+        (2). La valeur par défaut provient du prix d'échange précédent chargé \ n
+        (3). Entrez le montant de BTC / ETH que vous souhaitez convertir \ n
+        (4). Sélectionnez Bitcoin si vous convertissez pour Bitcoin ou Ethereum pour Conversion dans Ethereum \ n
+        (5). Sélectionnez Calculer BTC pour Bitcoin ou Calculer ETH pour Ethereum et votre conversion est terminée (Assurez-vous de sélectionner Bitcoin ou Ethereum avant la conversion) \ n
+        (6). Sélectionnez votre devise de désir</b></string>
+
+    <string name="notifications_allow">
+        Autoriser les notifications pour les prix quotidiens Bitcoin / Ethereum?
+    </string>
+    <string name="settings_saved">paramètres sauvegardés</string>
+    <string name="rate">Taux</string>
+    <string name="retriving">"Récupération des derniers cours d'échange BTC / ETH"</string>
+    <string name="wait">S'il vous plaît, attendez....</string>
+    <string name="waitt">S'il vous plaît, attendez....</string>
+    <string name="exitApplication">Quitter l'application?</string>
+    <string name="googleplaystore">Notez-nous sur Google Play Store!</string>
+    <string name="exit">Sortie</string>
+    <string name="click_help">Cliquez sur Aide pour en savoir plus</string>
+    <string name="help_short">Aidez-moi</string>
+    <string name="can_now_convert">Vous pouvez maintenant convertir BTC / ETH hors ligne sans connexion de données</string>
+    <string name="swipe_down">Balayez vers le bas pour Actualiser</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="ok">D'accord</string>
+    <string name="offline_title">
+       Conversion de l'aide hors ligne Bitcoin / Ethereum
+    </string>
+    <string name="offline_help">
+        (1). Entrez une valeur de 1 BTC / ETH en US $ (Une valeur par défaut a été présentée) \ n
+         (2). La valeur par défaut provient du prix d'échange précédent chargé \ n
+         (3). Entrez le montant de BTC / ETH que vous souhaitez convertir \ n
+         (4). Sélectionnez Bitcoin si vous convertissez pour Bitcoin ou Ethereum pour Conversion dans Ethereum \ n
+         (5). Sélectionnez Calculer BTC pour Bitcoin ou Calculer ETH pour Ethereum et votre conversion est terminée (Assurez-vous de sélectionner Bitcoin ou Ethereum avant la conversion) \ n
+         (6). Sélectionnez votre devise de souhait \ n
+    </string>
+    <string name="start_conversion_below">Démarrer la conversion ci-dessous</string>
+    <string name="_1_btc" translatable="false">1 BTC ($):</string>
+    <string name="no_connection_found">Aucune connexion trouvée</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">Votre connexion au réseau sans fil est désactivée. Restaurez vos connexions et balayez vers le bas pour actualiser</string>
+    <string name="convert_offline">Convertir hors ligne</string>
+    <string name="btc_usd" translatable="false">BTC - USD</string>
+    <string name="just_now">Juste maintenant</string>
+    <string name="eth_usd" translatable="false">ETH - USD</string>
+    <string name="share">Partager</string>
+    <string name="notifications">Notifications</string>
+    <string name="about_menu">Sur</string>
+    <string name="remove_ads">Supprimez la pub</string>
+    <string name="rate_app">Application de taux</string>
+    <string name="exit_app">Quitter App</string>
+    <string name="help">Help</string>
+    <string name="bitcoin_ethereum_news">Bitcoin / Ethereum Nouvelles</string>
+    <string name="offline">Convertir hors connexion</string>
+    <string name="feedback">retour d'information</string>
+    <string name="converter">Convertisseur</string>
+    <string name="tracker">Traqueur</string>
+    <string name="and"><![CDATA[&]]></string>
+    <string name="convert">Convertir</string>
+    <string name="from">De</string>
+    <string name="to">À</string>
+
+
+    <string name="withdraw">Se désister</string>
+    <string name="setup_wallet">Portefeuille d'installation</string>
+    <string name="mining_started">L'exploitation minière a commencé ......rester connecté</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">Appuyez sur pour extraire le BTC</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">Entrez l'adresse du portefeuille</string>
+    <string name="save">sauvegarder</string>
+    <string name="withdraw_bitcoin">Retirer Bitcoin .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">Vous pouvez retirer Bitcoin lorsque vous atteignez le seuil de 0,004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">Le paiement à votre adresse de portefeuille prendra 3 jours maximum pour arriver, s'il vous plaît assurez-vous d'entrer votre adresse valide de bitcoin valide, nous ne serons pas responsables d'aucun échec. Je vous remercie</string>
+    <string name="dismis">Rejeter</string>
+    <string name="withdraws">Se désister</string>
+    <string name="sending_data">Envoi de données</string>
+    <string name="mining_stopped">Mining arrêté</string>
+    <string name="not_connectd">Vous n'êtes pas connecté</string>
+    <string name="turn_on">Veuillez activer votre connexion de données et réessayer</string>
+    <string name="retryy">Recommencez</string>
+    <string name="wallet">Veuillez entrer une adresse de portefeuille</string>
+    <string name="threashold">Désolé, vous n'avez pas encore atteint votre seuil</string>
+    <string name="mine_bitcoin">Mine Bitcoin</string>
+    <string name="notmining">Vous ne minez pas Bitcoin.</string>
+    <string name="miningfail">L'extraction a échoué, réessayez dans 2 minutes</string>
+    <string name="btcincrese">La valeur du bitcoin a augmenté</string>
+    <string name="available">Bitcoin mining now available</string>
+</resources>

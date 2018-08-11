@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="click_text">بداية</string>
+
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="about"> <b> Bitcoin / Ethereum Tracker ومحول تطبيق أندرويد يتعقب أسعار Bitcoin و Ethereum Exchange في الوقت الفعلي ويعرض نتائج السعر بالدولار الأمريكي والعملة المحلية المطلوبة.
+        كما يسمح لك Bitcoin و Ethereum App بتحويل سعر صرف Bitcoin و Ethereum إلى العملة المحلية المطلوبة استنادًا إلى سعر الصرف القياسي الحالي في ذلك الوقت. \ n السماح للإشعار باستلام التنبيهات في الوقت الفعلي على زيادة أسعار Bitcoin و Ethereum. إذا كنت ترغب في إضافة عملة محلية لبلد أو إذا كان سعر صرف العملة المحلية لبلدك غير مدرج ، فيرجى إرسال تعليقات إلينا باسم بلدك واسم العملة المحلية وسنضيفها.
+تعليمات حول كيفية تحويل BTC و ETH دون اتصال دون اتصال البيانات
+        (1). أدخل قيمة 1 BTC / ETH بالدولار الأمريكي (تم تقديم قيمة افتراضية)
+        (2). القيمة الافتراضية هي من سعر Exchange السابق الذي تم تحميله
+        (3). أدخل مقدار BTC / ETH الذي تريد تحويله
+        (4). حدد Bitcoin إذا كنت تقوم بالتحويل إلى Bitcoin أو Ethereum للتحويل في Ethereum
+        (5). حدد حساب BTC لـ Bitcoin أو احسب ETH لـ Ethereum ، وإكمال التحويل الخاص بك (تأكد من تحديد Bitcoin أو Ethereum قبل التحويل)
+        (6). اختر العملة التي تريدها</b></string>
+
+    <string name="notifications_allow">
+        السماح الإخطارات لبيتكوين اليومية / أسعار Ethereum؟
+    </string>
+    <string name="settings_saved">الإعدادات المحفوظة</string>
+    <string name="rate">معدل</string>
+    <string name="retriving">"استرجاع أحدث سعر الصرف BTC / ETH"</string>
+    <string name="wait">أرجو الإنتظار....</string>
+    <string name="waitt">أرجو الإنتظار....</string>
+    <string name="exitApplication">الخروج من التطبيق؟</string>
+    <string name="googleplaystore">قيمنا على متجر Google Play!</string>
+    <string name="exit">ىخرج</string>
+    <string name="click_help">انقر فوق "تعليمات" لمعرفة المزيد</string>
+    <string name="help_short">مساعدة</string>
+    <string name="can_now_convert">يمكنك الآن تحويل BTC / ETH دون اتصال البيانات</string>
+    <string name="swipe_down">اسحب لأسفل للتحديث</string>
+    <string name="yes">نعم فعلا</string>
+    <string name="no">لا</string>
+    <string name="ok">حسنا</string>
+    <string name="offline_title">
+        تحويل Bitcoin / Ethereum غير متصل تعليمات
+    </string>
+    <string name="offline_help">
+       (1). أدخل قيمة 1 BTC / ETH بالدولار الأمريكي (تم تقديم قيمة افتراضية)
+         (2). القيمة الافتراضية هي من سعر Exchange السابق الذي تم تحميله n\
+         (3). أدخل مقدار BTC / ETH الذي تريد تحويله n\
+         (4). حدد Bitcoin إذا كنت تقوم بالتحويل إلى Bitcoin أو Ethereum للتحويل في   Ethereum
+ \n         (5). حدد حساب BTC لـ Bitcoin أو احسب ETH لـ Ethereum ، وإكمال التحويل الخاص بك (تأكد من تحديد Bitcoin أو Ethereum قبل التحويل)
+         (6). اختر العملة التي تريدها n\
+    </string>
+    <string name="start_conversion_below">بدء التحويل أدناه</string>
+    <string name="_1_btc" translatable="false">1 BTC ($):</string>
+    <string name="no_connection_found">لم يتم العثور على اتصال</string>
+    <string name="your_connection_to_the_wireless_network_is_turned_off_restore_your_connections_and_swipe_down_to_refresh">تم إيقاف الاتصال بالشبكة اللاسلكية. استعد اتصالاتك وانتقد لأسفل للتحديث</string>
+    <string name="convert_offline">تحويل دون اتصال</string>
+    <string name="btc_usd" translatable="false">BTC - USD</string>
+    <string name="just_now">الآن فقط</string>
+    <string name="eth_usd" translatable="false">ETH - USD</string>
+    <string name="share">شارك</string>
+    <string name="notifications">إخطارات</string>
+    <string name="about_menu">حول</string>
+    <string name="remove_ads">ازالة الاعلانات</string>
+    <string name="rate_app">معدل التطبيق</string>
+    <string name="exit_app">الخروج من التطبيق</string>
+    <string name="help">مساعدة</string>
+    <string name="bitcoin_ethereum_news">بيتكوين / أخبار Ethereum</string>
+    <string name="offline">تحويل متواجد حاليا</string>
+    <string name="feedback">ردود الفعل</string>
+    <string name="converter">محول</string>
+    <string name="tracker">المقتفي</string>
+    <string name="and"><![CDATA[و]]></string>
+    <string name="convert">تحول</string>
+    <string name="from">من عند</string>
+    <string name="to">إلى</string>
+
+    <string name="withdraw">سحب</string>
+    <string name="setup_wallet">إعداد المحفظة</string>
+    <string name="mining_started">بدأ التعدين ...... ابق على اتصال</string>
+    <string name="_250">250+</string>
+    <string name="tap_to_mine_btc">اضغط على الألغام BTC</string>
+    <string name="_300">300+</string>
+    <string name="_350">350+</string>
+    <string name="_400">400+</string>
+    <string name="enter_wallet_address">أدخل عنوان المحفظة</string>
+    <string name="save">حفظ</string>
+    <string name="withdraw_bitcoin">سحب Bitcoin .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">يمكنك سحب Bitcoin عندما تصل إلى 0.004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">سيستغرق الدفع إلى عنوان محفظتك مدة تصل إلى 3 أيام للوصول ، يُرجى التأكد من إدخال عنوان صالح صالح للبيتكوين ، ولن نكون مسؤولين عن أي عطل. شكرا لك</string>
+    <string name="dismis">رفض</string>
+    <string name="withdraws">سحب</string>
+    <string name="sending_data">إرسال البيانات</string>
+    <string name="mining_stopped">توقف التعدين</string>
+    <string name="not_connectd">أنت غير متصل</string>
+    <string name="turn_on">الرجاء تشغيل اتصال البيانات وإعادة المحاولة</string>
+    <string name="retryy">إعادة المحاولة</string>
+    <string name="wallet">يرجى إدخال عنوان المحفظة</string>
+    <string name="threashold">عذرًا ، لم تصل إلى الحد الأدنى حتى الآن</string>
+    <string name="mine_bitcoin">منجم بيتكوين</string>
+    <string name="notmining">أنت لا تعدين بيتكوين.</string>
+    <string name="miningfail">فشل التعدين ، حاول مرة أخرى خلال دقيقتين</string>
+    <string name="btcincrese">زيادة قيمة البيتكوين</string>
+    <string name="available">Bitcoin mining now available</string>
+</resources>
