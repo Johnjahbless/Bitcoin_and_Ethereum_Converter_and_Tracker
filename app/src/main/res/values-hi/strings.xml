@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bitcoin/Ethereum</string>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="wait">कृपया प्रतीक्षा करें ....</string>
+    <string name="waitt">कृपया प्रतीक्षा करें ....</string>
     <string name="click_text">प्रारंभ</string>
     <string name="about">"बिटकॉइन / एथेरियम ट्रैकर और कनवर्टर एंड्रॉइड ऐप रीयलटाइम में बिटकोइन और एथेरियम एक्सचेंज की कीमतों को ट्रैक करता है और मूल्य के परिणाम $ और आपकी वांछित स्थानीय मुद्रा प्रदर्शित करता है। बिटकॉइन और एथेरियम ऐप आपको उस समय वर्तमान मानक विनिमय मूल्य के आधार पर बिटकॉइन और एथेरियम विनिमय मूल्य को आपकी वांछित स्थानीय मुद्रा में परिवर्तित करने की अनुमति देता है और डेटा कनेक्शन के साथ बिटकोइन और एथेरियम ऑफ़लाइन भी परिवर्तित करता है। तेज़ और आसान!  डेटा कनेक्शन सहायता के बिना बीटीसी और ईटीएच ऑफ़लाइन; -      (1)। यूएस $ में 1 बीटीसी / ईटीएच का मूल्य दर्ज करें (एक डिफ़ॉल्ट मान प्रस्तुत किया गया है)।      (2)। डिफ़ॉल्ट मान पिछले एक्सचेंज मूल्य से लोड किया गया है।      (3)। बीटीसी / ईटीएच की मात्रा दर्ज करें जिसे आप कन्वर्ट करना चाहते हैं \"+      (4)। यदि आप एटरेरम में रूपांतरण के लिए बिटकोइन या एथेरियम के लिए परिवर्तित कर रहे हैं तो बिटकॉइन का चयन करें।      (5)। बिटकॉइन के लिए बीटीसी की गणना करें या एथेरियम के लिए ईटीएच की गणना करें और आपका रूपांतरण पूरा हो गया है (सुनिश्चित करें कि आप रूपांतरण से पहले बिटकॉइन या एथेरियम का चयन करें)।      (6)। अपनी इच्छा मुद्रा का चयन करें। अधिसूचना को बिटकोइन और एथेरियम की कीमतों में वृद्धि पर हमेशा रीयलटाइम अलर्ट प्राप्त करने दें। यदि आप एक देश स्थानीय मुद्रा जोड़ना चाहते हैं या यदि आपके देश की स्थानीय मुद्रा विनिमय मूल्य सूचीबद्ध नहीं है, तो कृपया हमें अपने देश के नाम और स्थानीय मुद्रा नाम के साथ एक प्रतिक्रिया भेजें और हम इसे जोड़ देंगे। "</string>
     <string name="rate">एप्लिकेशन का मूल्यांकन करें</string>
@@ -46,4 +55,33 @@
     <string name="googleplaystore">दर गूगल पर हमें playstore</string>
     <string name="settings_saved">सेटिंग्स में ढूंढें सहेजी गयी</string>
     <string name="notifications_allow">सूचनाओं की अनुमति दें के लिए दैनिक bitcoin / ethereum कीमतों</string>
+
+
+    <string name="withdraw">निकालना</string>
+    <string name="setup_wallet">सेटअप वॉलेट</string>
+    <string name="mining_started">खनन शुरू हुआ ......जुड़े रहें</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">बीटीसी को मेरा टैप करें</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">वॉलेट पता दर्ज करें</string>
+    <string name="save">बचाना</string>
+    <string name="withdraw_bitcoin">बिटकॉइन वापस लेना .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">जब आप 0.004 थ्रेसहोल्ड पर जाते हैं तो आप बिटकोइन वापस ले सकते हैं</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">आपके वॉलेट पते पर भुगतान आने के लिए अधिकतम 3 दिन लगेंगे, कृपया सुनिश्चित करें कि आप अपना सही मान्य बिटकॉइन पता दर्ज करें, हम किसी भी विफलता के लिए उत्तरदायी नहीं होंगे। धन्यवाद</string>
+    <string name="dismis">खारिज</string>
+    <string name="withdraws">निकालना</string>
+    <string name="sending_data">डेटा भेज रहा है</string>
+    <string name="mining_stopped">खनन बंद कर दिया</string>
+    <string name="not_connectd">आप जुड़े नहीं हैं</string>
+    <string name="turn_on">कृपया अपना डेटा कनेक्शन चालू करें और पुनः प्रयास करें</string>
+    <string name="retryy">पुन: प्रयास करें</string>
+    <string name="wallet">कृपया वॉलेट पता दर्ज करें</string>
+    <string name="threashold">क्षमा करें, आप अभी तक अपनी सीमा तक नहीं पहुंच पाए हैं</string>
+    <string name="notmining">आप बिटकॉइन खनन नहीं कर रहे हैं।</string>
+    <string name="miningfail">खनन विफल रहा, 2 मिनट में फिर कोशिश करें</string>
+    <string name="btcincrese">बिटकॉइन मूल्य में वृद्धि हुई</string>
+    <string name="mine_bitcoin">मेरा बिटकॉइन</string>
+    <string name="available">Bitcoin mining now available</string>
 </resources>

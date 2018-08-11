@@ -39,9 +39,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:606298400178:android:756590e171102a45",
+        "mobilesdk_app_id": "1:606298400178:android:0da4fda23feb62bc",
         "android_client_info": {
-          "package_name": "com.koloapps.himquickguide"
+          "package_name": "com.koloapps.contest.cryptocomparecurrencyconverter"
         }
       },
       "oauth_client": [
@@ -66,7 +66,8 @@
         "ads_service": {
           "status": 2
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-3517746418699749~7280583326"
     },
     {
       "client_info": {
@@ -101,9 +102,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:606298400178:android:0da4fda23feb62bc",
+        "mobilesdk_app_id": "1:606298400178:android:756590e171102a45",
         "android_client_info": {
-          "package_name": "com.koloapps.contest.cryptocomparecurrencyconverter"
+          "package_name": "com.koloapps.himquickguide"
         }
       },
       "oauth_client": [

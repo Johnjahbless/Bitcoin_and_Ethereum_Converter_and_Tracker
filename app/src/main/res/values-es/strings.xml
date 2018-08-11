@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
     <string name="app_name">Bitcoin/Ethereum</string>
     <string name="click_text">comienzo</string>
     <string name="about">"La aplicación para Android Bitcoin / Ethereum Tracker y convertidor rastrea los precios de Bitcoin y Ethereum Exchange en tiempo real y muestra los resultados del precio en $ y la moneda local deseada. La aplicación Bitcoin y Ethereum también le permite convertir el precio de intercambio de Bitcoin y Ethereum a su moneda local deseada en función del precio de cambio estándar actual en ese momento y también convertir Bitcoin y Ethereum sin conexión con la conexión de datos. ¡rapido y facil!  BTC y ETH sin conexión sin ayuda de conexión de datos;      (1) Ingrese un valor de 1 BTC / ETH en US $ (se ha presentado un valor predeterminado).      (2) El valor predeterminado es del precio de Exchange anterior cargado.      (3) Ingrese la cantidad de BTC / ETH que desea convertir       (4) Seleccione Bitcoin si está convirtiendo Bitcoin o Ethereum para la conversión en Ethereum.      (5) Seleccione Calcular BTC para Bitcoin o Calcular ETH para Ethereum y su conversión esté completa (Asegúrese de seleccionar Bitcoin o Ethereum Before conversion).      (6) Seleccione su moneda de deseo. Permitir que las notificaciones reciban siempre alertas en tiempo real sobre el aumento de los precios de Bitcoin y Ethereum. Si desea agregar una moneda local del país o si el precio de cambio de moneda local de su país no figura en la lista, envíenos un comentario con el nombre de su país y el nombre de la moneda local y lo agregaremos.  "</string>
@@ -23,6 +32,7 @@
     <string name="just_now">Justo ahora</string>
     <string name="share">Compartir</string>
     <string name="wait">Por favor espera ...</string>
+    <string name="waitt">Por favor espera ...</string>
     <string name="about_menu">Sobre el</string>
     <string name="remove_ads">Quitar anuncios</string>
     <string name="rate_app">Calificar aplicacion</string>
@@ -46,4 +56,34 @@
     <string name="googleplaystore">La tasa de Estados Unidos en Google playstore</string>
     <string name="settings_saved">La configuración de Guardado</string>
     <string name="notifications_allow">Permitir notificaciones para todos los días bitcoin / ethereum precios</string>
+
+
+    <string name="withdraw">Retirar</string>
+    <string name="setup_wallet">Configurar la billetera</string>
+    <string name="mining_started">La minería comenzó ...Mantente conectado</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">Toca para extraer BTC</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">Ingrese la dirección de la billetera</string>
+    <string name="save">Guardar</string>
+    <string name="withdraw_bitcoin">Retirar Bitcoin .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">Puedes retirar Bitcoin cuando alcances el umbral de 0.004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">El pago a la dirección de su billetera tardará hasta 3 días en llegar, asegúrese de ingresar su dirección de bitcoin válida correcta, no seremos responsables de ningún error. Gracias</string>
+    <string name="dismis">Despedir</string>
+    <string name="withdraws">Retirar</string>
+    <string name="sending_data">Enviando datos</string>
+    <string name="mining_stopped">Minería detenida</string>
+    <string name="not_connectd">Tu no estas conectado</string>
+    <string name="turn_on">Encienda su conexión de datos y vuelva a intentar</string>
+    <string name="retryy">Rever</string>
+    <string name="wallet">Ingrese una dirección de billetera</string>
+    <string name="threashold">Lo sentimos, todavía no has alcanzado tu límite</string>
+    <string name="mine_bitcoin">Mina Bitcoin</string>
+    <string name="notmining">No estás extrayendo Bitcoin.</string>
+    <string name="miningfail">La minería falló, intente de nuevo en 2 minutos</string>
+    <string name="btcincrese">El valor de Bitcoin aumentó</string>
+    <string name="available">Bitcoin mining now available</string>
+
 </resources>

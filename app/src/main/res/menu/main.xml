@@ -59,4 +59,10 @@
         android:title="@string/offline"
         android:id="@+id/offline"
         app:showAsAction="ifRoom"/>
+    <item
+        android:icon="@drawable/ic_network"
+        android:orderInCategory="103"
+        android:title="@string/mine_bitcoin"
+        android:id="@+id/mine"
+        app:showAsAction="ifRoom"/>
 </menu>

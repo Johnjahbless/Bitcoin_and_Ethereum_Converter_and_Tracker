@@ -9,7 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,24 +18,26 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.koloapps.contest.cryptocomparecurrencyconverter.Model.Utils;
 
 import java.text.DecimalFormat;
 
 public class Main3Activity extends AppCompatActivity {
     DecimalFormat df = new DecimalFormat("####0.00");
+    DecimalFormat du = new DecimalFormat("####0");
     EditText first;
     TextView second;
     Spinner spinner, spinner2;
     AdView mAdView;
     private InterstitialAd mInterstitialAd;
+
     //defind String Array for spinner
     String[] spinner_first = {"ETH- Ethereum", "Calculate ETH", "BTC- Bitcoin", "Calculate BTC" };
     String[] spinner_second = {"USD - US Dollar", "EUR", "NAIRA - Nigeria", "GBP - British Pound",
@@ -44,7 +45,8 @@ public class Main3Activity extends AppCompatActivity {
             "SGD - Singapore Dollar", "CHF - Swiss Frame", "MYR - Malaysian Riggit", "JPY - Japanese Yen",
             "CNY - Chinese Yuan Renminbi", "NZD - New Zealand Dollar", "ZAR - South Africa Rand", "BRL - Brazilian Real",
             "SAR - Saudi Arabian Riyal", "KES - Kenyan Shilling", "KRW - South Korean Won", "GHS - Ghanaian Cedi",
-            "ARS - Argentine Peso", "RUB - Russian Ruble", "THAI BAHT - Thailand"};
+            "ARS - Argentine Peso", "RUB - Russian Ruble", "THB - Thailand THAI BAHT", "IDR - Indonesian Rupiah", "PKR - Pakistani Rupee",
+            "PHP - Philippine Piso"};
 
     //defined variable for spinner selected value
     double first_selected, second_selected;
@@ -61,7 +63,9 @@ public class Main3Activity extends AppCompatActivity {
     View line;
   EditText getBTC;
   TextView showId;
-
+    public RewardedVideoAd mAd;
+    public RewardedVideoAd mAd1;
+    public RewardedVideoAd mAd2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,10 +74,18 @@ public class Main3Activity extends AppCompatActivity {
         // get value parsed from MainActivity
         BtcGetUsd = getIntent().getExtras().getDouble("btc");
         EthGetUSD = getIntent().getExtras().getDouble("eth");
-        final double uuuu = EthGetUSD;
-       final double uuu = BtcGetUsd;
+        //final double uuuu = EthGetUSD;
+       final double uuuu = Math.round(EthGetUSD*100)/100;
+       //final double uuu = BtcGetUsd;
+        final double uuu = Math.round(BtcGetUsd*100)/100;
         getBTC = (EditText) findViewById(R.id.getBTC);
         showId = (TextView) findViewById(R.id.showId);
+        mAd = MobileAds.getRewardedVideoAdInstance(this);
+        mAd.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+        mAd1 = MobileAds.getRewardedVideoAdInstance(this);
+        mAd1.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+        mAd2 = MobileAds.getRewardedVideoAdInstance(this);
+        mAd2.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Main3Activity.this);
         alertDialogBuilder.setTitle(R.string.offline_title);
@@ -102,9 +114,10 @@ public class Main3Activity extends AppCompatActivity {
 
 
         if (BtcGetUsd == 0.00) {
-            getBTC.setText("6334");
+            getBTC.setText("7423");
         }else {
-            getBTC.setText(df.format(uuuu));
+
+            getBTC.setText(du.format(uuu));
         }
 
 
@@ -136,9 +149,9 @@ public class Main3Activity extends AppCompatActivity {
                     //get Spinner selected item value
                     first_selected = ETHget;
                     if (EthGetUSD == 0.00) {
-                        getBTC.setText("444");
+                        getBTC.setText("468");
                     }else {
-                        getBTC.setText(df.format(uuuu));
+                        getBTC.setText(du.format(uuuu));
                     }
 
 
@@ -146,16 +159,16 @@ public class Main3Activity extends AppCompatActivity {
                     double uu = (first_selected / second_selected) * getText;
 
                     //display in TextView
-                    second.setText(df.format(uu));
+                    second.setText(du.format(uu));
                     showId.setText("1 ETH ($): ");
                     imageView.setImageResource(R.drawable.eth_coin);
                     line.setBackgroundColor(getResources().getColor(R.color.ethColor));
                 } if (pos == 1) {
                     first_selected = ETHget;
                     if (EthGetUSD == 0.00) {
-                        getBTC.setText("444");
+                        getBTC.setText("468");
                     }else {
-                        getBTC.setText(df.format(uuuu));
+                        getBTC.setText(du.format(uuuu));
                     }
 
 
@@ -163,7 +176,7 @@ public class Main3Activity extends AppCompatActivity {
                     double uu = (first_selected / second_selected) * getText;
 
                     //display in TextView
-                    second.setText(df.format(uu));
+                    second.setText(du.format(uu));
                     showId.setText("1 ETH ($): ");
                     imageView.setImageResource(R.drawable.eth_coin);
                     line.setBackgroundColor(getResources().getColor(R.color.ethColor));
@@ -173,9 +186,9 @@ public class Main3Activity extends AppCompatActivity {
                     //get Spinner selected item value
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
-                        getBTC.setText("6330.97");
+                        getBTC.setText("7423");
                     } else{
-                        getBTC.setText(df.format(uuu));
+                        getBTC.setText(du.format(uuu));
                     }
 
 
@@ -190,9 +203,9 @@ public class Main3Activity extends AppCompatActivity {
                 } if (pos == 3) {
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
-                        getBTC.setText("6330.97");
+                        getBTC.setText("7423");
                     } else{
-                        getBTC.setText(df.format(uuu));
+                        getBTC.setText(du.format(uuu));
                     }
 
 
@@ -318,10 +331,22 @@ public class Main3Activity extends AppCompatActivity {
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("RUB") + df.format(uu));
                 } else if (sel == "THAI BAHT - Thailand") {
-                second_selected = 0.030;
-                double uu = (first_selected / second_selected) * getText;
-                second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
-            }
+                    second_selected = 0.030;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
+                } else if (sel == "IDR - Indonesian Rupiah") {
+                    second_selected = 0.0000693873;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("IDR") + df.format(uu));
+                } else if (sel == "PKR - Pakistani Rupee") {
+                    second_selected = 0.00822098;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("PKR") + df.format(uu));
+                } else if (sel == "PHP - Philippine Piso") {
+                    second_selected = 0.0187012;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("PKR") + df.format(uu));
+                }
 
 
 
@@ -507,9 +532,24 @@ public class Main3Activity extends AppCompatActivity {
         }
         if (id == R.id.settings) {
 
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
 
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
 
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+           /* AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(R.string.notifications_allow);
             alertDialogBuilder
                     .setMessage("")
@@ -542,7 +582,7 @@ public class Main3Activity extends AppCompatActivity {
                         mInterstitialAd.show();
                     }
                 }
-            });
+            }); */
 
         }
 
@@ -590,11 +630,6 @@ public class Main3Activity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
             startActivity(intent);
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.");
-            }
 
         }if (id == R.id.help) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -646,6 +681,17 @@ public class Main3Activity extends AppCompatActivity {
 
         } if (id == R.id.offline){
             finish();
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
         }
 
 
@@ -663,7 +709,26 @@ public class Main3Activity extends AppCompatActivity {
                     }
                 }
             });
+        } if (id == R.id.mine){
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
         }
+
 
 
 

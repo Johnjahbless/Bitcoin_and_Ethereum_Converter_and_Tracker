@@ -9,7 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,13 +18,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.koloapps.contest.cryptocomparecurrencyconverter.Model.Utils;
 
 import java.text.DecimalFormat;
@@ -37,6 +36,9 @@ public class ConvertionActivity extends AppCompatActivity {
     Spinner spinner, spinner2;
     AdView mAdView;
     private InterstitialAd mInterstitialAd;
+    public RewardedVideoAd mAd;
+    public RewardedVideoAd mAd1;
+    public RewardedVideoAd mAd2;
     //defind String Array for spinner
     String[] spinner_first = {"BTC - BitCoin", "ETH- Ethereum"};
     String[] spinner_second = {"USD - US Dollar", "EUR", "NAIRA - Nigeria", "GBP - British Pound",
@@ -44,7 +46,8 @@ public class ConvertionActivity extends AppCompatActivity {
             "SGD - Singapore Dollar", "CHF - Swiss Frame", "MYR - Malaysian Riggit", "JPY - Japanese Yen",
             "CNY - Chinese Yuan Renminbi", "NZD - New Zealand Dollar", "ZAR - South Africa Rand", "BRL - Brazilian Real",
             "SAR - Saudi Arabian Riyal", "KES - Kenyan Shilling", "KRW - South Korean Won", "GHS - Ghanaian Cedi",
-            "ARS - Argentine Peso", "RUB - Russian Ruble", "THAI BAHT - Thailand"};
+            "ARS - Argentine Peso", "RUB - Russian Ruble", "THB - Thailand THAI BAHT", "IDR - Indonesian Rupiah", "PKR - Pakistani Rupee",
+    "PHP - Philippine Piso"};
 
     //defined variable for spinner selected value
     double first_selected, second_selected;
@@ -67,7 +70,14 @@ public class ConvertionActivity extends AppCompatActivity {
         // get value parsed from MainActivity
         BtcGetUsd = getIntent().getExtras().getDouble("btc");
         EthGetUSD = getIntent().getExtras().getDouble("eth");
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        mAd = MobileAds.getRewardedVideoAdInstance(this);
+        mAd.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+        mAd1 = MobileAds.getRewardedVideoAdInstance(this);
+        mAd1.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+        mAd2 = MobileAds.getRewardedVideoAdInstance(this);
+        mAd2.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+
+       /* AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle(R.string.can_now_convert);
         alertDialogBuilder
                 .setMessage(R.string.click_help)
@@ -89,7 +99,7 @@ public class ConvertionActivity extends AppCompatActivity {
                     }
                 });
         AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        alertDialog.show(); */
         //initialized views
         first = (EditText) findViewById(R.id.firstEdit);
         second = (TextView) findViewById(R.id.secondEdit);
@@ -248,10 +258,22 @@ public class ConvertionActivity extends AppCompatActivity {
                     second_selected = 0.01719;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("RUB") + df.format(uu));
-                }  else if (sel == "THAI BAHT - Thailand") {
+                }  else if (sel == "THB - Thailand THAI BAHT") {
                     second_selected = 0.030;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
+                } else if (sel == "IDR - Indonesian Rupiah") {
+                    second_selected = 0.0000693873;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("IDR") + df.format(uu));
+                } else if (sel == "PKR - Pakistani Rupee") {
+                    second_selected = 0.00822098;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("PKR") + df.format(uu));
+                } else if (sel == "PHP - Philippine Piso") {
+                    second_selected = 0.0187012;
+                    double uu = (first_selected / second_selected) * getText;
+                    second.setText(Utils.getCurrencySymbol("PKR") + df.format(uu));
                 }
 
 
@@ -366,6 +388,16 @@ public class ConvertionActivity extends AppCompatActivity {
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_TEXT, "Hy, Download this Bitcoin and Ethereum android application, it's very useful, you can track Bitcoin and Ethereum exchange prices and can also convert to your local currency, i Love it! Am sure you will also Check it out using this link here.... https://play.google.com/store/apps/details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
             startActivity(shareIntent);
+
+
+
+        }
+        if (id == R.id.settings) {
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+
             mInterstitialAd = new InterstitialAd(getApplicationContext());
             mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
             AdRequest adRequest = new AdRequest.Builder().build();
@@ -378,12 +410,7 @@ public class ConvertionActivity extends AppCompatActivity {
                 }
             });
 
-
-        }
-        if (id == R.id.settings) {
-
-
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+          /*  AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(R.string.notifications_allow);
             alertDialogBuilder
                     .setMessage("")
@@ -417,7 +444,7 @@ public class ConvertionActivity extends AppCompatActivity {
                     }
                 }
             });
-
+*/
         }
 
         if (id == R.id.exit) {
@@ -464,11 +491,7 @@ public class ConvertionActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
             startActivity(intent);
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.");
-            }
+
 
         }if (id == R.id.help) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -523,6 +546,17 @@ public class ConvertionActivity extends AppCompatActivity {
             intent.putExtra("btc", BtcGetUsd);
             intent.putExtra("eth", EthGetUSD);
             startActivity(intent);
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
         }
 
             if (id == R.id.about) {
@@ -539,11 +573,30 @@ public class ConvertionActivity extends AppCompatActivity {
                         }
                     }
                 });
-            }
+            }  if (id == R.id.mine){
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+        }
 
 
 
-            return super.onOptionsItemSelected(item);
+
+        return super.onOptionsItemSelected(item);
 
 
             // Inflate the menu; this adds items to the action bar if it is present.

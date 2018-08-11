@@ -55,7 +55,7 @@ public class Main2Activity extends AppCompatActivity {
                     startActivity(Intent.createChooser(emailIntent, "Send mail..."));
                     onBackPressed();
                     Log.d("Finished sending email.", "");
-                    if (mInterstitialAd.isLoaded()) {
+                   /* if (mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
                         mInterstitialAd = new InterstitialAd(getApplicationContext());
                         mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
@@ -70,7 +70,7 @@ public class Main2Activity extends AppCompatActivity {
                         });
                     } else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }
+                    } */
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(Main2Activity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
 
@@ -171,9 +171,22 @@ public class Main2Activity extends AppCompatActivity {
         }
         if (id == R.id.settings) {
 
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
 
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
 
-
+/*
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(R.string.notifications_allow);
             alertDialogBuilder
@@ -197,7 +210,7 @@ public class Main2Activity extends AppCompatActivity {
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
-
+*/
         }
 
         if (id == R.id.exit) {
@@ -231,11 +244,7 @@ public class Main2Activity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
             startActivity(intent);
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.");
-            }
+
 
         }if (id == R.id.help) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -288,6 +297,17 @@ public class Main2Activity extends AppCompatActivity {
         } if (id == R.id.offline){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
         }
 
 
@@ -305,7 +325,24 @@ public class Main2Activity extends AppCompatActivity {
                     }
                 }
             });
+        }  if (id == R.id.mine){
+            Intent intent = new Intent(this, Main4Activity.class);
+            startActivity(intent);
+
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
         }
+
 
 
         return super.onOptionsItemSelected(item);

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
     <string name="app_name">Bitcoin/Ethereum</string>
     <string name="click_text">Начало</string>
     <string name="about">"Bitcoin / Ethereum Tracker и конвертер Android App отслеживает цены на биткойн и Ethereum Exchange в реальном времени и отображает результаты цены в $ и желаемую местную валюту. Bitcoin и Ethereum App также позволяют конвертировать биржевую цену Bitcoin и Ethereum в желаемую местную валюту на основе текущей стандартной цены обмена в то время, а также конвертировать Bitcoin и Ethereum в автономном режиме с использованием данных. быстро и легко!  BTC и ETH Offline без помощи подключения к данным -      (1). Введите значение 1 BTC / ETH в долларах США (значение по умолчанию было представлено).      (2). Значение по умолчанию - от предыдущей цены Exchange.      (3). Введите сумму BTC / ETH, которую вы хотите конвертировать \"+      (4). Выберите Bitcoin, если вы конвертируете Bitcoin или Ethereum для преобразования в Ethereum.      (5). Выберите Calculate BTC для биткойнов или вычислите ETH для Ethereum, и ваше преобразование завершено (убедитесь, что вы выбрали Bitcoin или Ethereum перед конверсией).      (6). Выберите валюту желаемого. Разрешить уведомление всегда получать оповещения в реальном времени о повышении цен Bitcoin и Ethereum. Если вы хотите добавить местную валюту страны или если в местной валюте не указана местная валюта, отправьте нам отзыв с именем вашей страны и названием местной валюты, и мы добавим его. "</string>
@@ -8,17 +17,18 @@
     <string name="exitApplication">Exit App</string>
     <string name="exit">Exit App</string>
     <string name="click_help">Нажмите кнопку «Справка» ниже, чтобы узнать больше</string>
-    <string name="wait">Пожалуйста, подождите ...</string>
     <string name="help_short">Помогите</string>
     <string name="can_now_convert">Теперь вы можете конвертировать BTC / ETH в автономном режиме без подключения к данным</string>
     <string name="ok">Хорошо</string>
+    <string name="wait">Пожалуйста, подождите ...</string>
+    <string name="waitt">Пожалуйста, подождите ...</string>
     <string name="offline_title">" BTC и ETH Offline без помощи подключения к данным "</string>
     <string name="offline_help">(1). Введите значение 1 BTC / ETH в долларах США (значение по умолчанию было представлено).   \n
-        (2). Значение по умолчанию - от предыдущей цены Exchange.   \n
-        (3). Введите сумму BTC / ETH, которую вы хотите конвертировать    \n
-        (4). Выберите Bitcoin, если вы конвертируете Bitcoin или Ethereum для преобразования в Ethereum. \n
-        (5). Выберите Calculate BTC для биткойнов или вычислите ETH для Ethereum, и ваше преобразование завершено (убедитесь, что вы выбрали Bitcoin или Ethereum перед конверсией).  \n
-        (6). Выберите валюту желаемого. "</string>
+        (2). Значение по умолчанию - от предыдущей цены Exchange.    \n
+        (3). Введите сумму BTC / ETH, которую вы хотите конвертировать   \n
+        (4). Выберите Bitcoin, если вы конвертируете Bitcoin или Ethereum для преобразования в Ethereum.   \n
+        (5). Выберите Calculate BTC для биткойнов или вычислите ETH для Ethereum, и ваше преобразование завершено (убедитесь, что вы выбрали Bitcoin или Ethereum перед конверсией).    n\
+        (6). Выберите валюту желаемого. </string>
     <string name="start_conversion_below">Начать преобразование ниже</string>
     <string name="convert_offline">Конвертировать офлайн</string>
     <string name="just_now">Прямо сейчас</string>
@@ -46,4 +56,33 @@
     <string name="googleplaystore">Ставка за нами на Google playstore</string>
     <string name="settings_saved">Настройки сохраняются</string>
     <string name="notifications_allow">Позволяют уведомления для ежедневного bitcoin / ethereum цены</string>
+
+
+    <string name="withdraw">Изымать</string>
+    <string name="setup_wallet">Установочный кошелек</string>
+    <string name="mining_started">Добыча началась ......оставайся на связи</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">Нажмите, чтобы мой BTC</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">Введите адрес кошелька</string>
+    <string name="save">Сохранить</string>
+    <string name="withdraw_bitcoin">Снять биткойн .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">Вы можете снять биткойн, когда вы достигнете порога 0,004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">Оплата на ваш кошелек будет зависеть от трех дней максимум, пожалуйста, убедитесь, что вы указали правильный правильный адрес биткойна, мы не будем нести ответственность за любой сбой. спасибо</string>
+    <string name="dismis">отклонять</string>
+    <string name="withdraws">Изымать</string>
+    <string name="sending_data">Отправка данных</string>
+    <string name="mining_stopped">Добыча прекратилась</string>
+    <string name="not_connectd">Вы не подключены</string>
+    <string name="turn_on">Включите подключение к данным и повторите попытку.</string>
+    <string name="retryy">снова пробовать</string>
+    <string name="wallet">Введите адрес кошелька</string>
+    <string name="threashold">К сожалению, вы еще не достигли своего порога</string>
+    <string name="notmining">Вы не добываете биткойн.</string>
+    <string name="miningfail">Не удалось выполнить Mining, повторите попытку через 2 минуты</string>
+    <string name="btcincrese">Увеличилось значение биткойна</string>
+    <string name="mine_bitcoin">Мой биткойн</string>
+    <string name="available">Bitcoin mining now available</string>
 </resources>

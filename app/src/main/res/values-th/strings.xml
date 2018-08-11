@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
+    <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
+    <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3517746418699749~7280583326</string>
+    <string name="admob_interstitial_ad1" translatable="false">ca-app-pub-3517746418699749/2108150569</string>
+    <string name="admob_interstetial_ad" translatable="false">ca-app-pub-3517746418699749/8344708392</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
     <string name="app_name">Bitcoin/Ethereum</string>
     <string name="click_text">เริ่มต้น</string>
     <string name="about"> <b> Bitcoin / Ethereum Tracker และ Conversion Android App ติดตาม Bitcoin และ Ethereum Exchange ในราคาเรียลไทม์และแสดงผลลัพธ์ราคาเป็นสกุลเงินดอลลาร์และสกุลเงินท้องถิ่นที่คุณต้องการ          
@@ -16,7 +25,8 @@
     <string name="settings_saved">บันทึกการตั้งค่าแล้ว</string>
     <string name="rate">อัตรา</string>
     <string name="retriving">กำลังเรียกราคาล่าสุดของ BTC / ETH Exchange</string>
-    <string name="wait" translatable="false">โปรดรอ ....</string>
+    <string name="wait" >โปรดรอ ....</string>
+    <string name="waitt" >โปรดรอ ....</string>
     <string name="exitApplication">ออกจากแอพพลิเคชั่น?</string>
     <string name="googleplaystore">ให้คะแนนเราทาง Google Play สโตร์!</string>
     <string name="exit">ทางออก</string>
@@ -50,4 +60,33 @@
     <string name="convert">แปลง</string>
     <string name="from">จาก</string>
     <string name="to">มัน</string>
+
+
+    <string name="withdraw">ถอน</string>
+    <string name="setup_wallet">ตั้งค่า Wallet</string>
+    <string name="mining_started">การทำเหมืองแร่เริ่ม ......เชื่อมต่อกัน</string>
+    <string name="_250">+250</string>
+    <string name="tap_to_mine_btc">แตะเพื่อทำเหมือง BTC</string>
+    <string name="_300">+300</string>
+    <string name="_350">+350</string>
+    <string name="_400">+400</string>
+    <string name="enter_wallet_address">ป้อนที่อยู่กระเป๋าสตางค์</string>
+    <string name="save">บันทึก</string>
+    <string name="withdraw_bitcoin">ถอน Bitcoin .....</string>
+    <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">คุณสามารถถอน Bitcoin เมื่อคุณเข้าสู่เกณฑ์ 0.004</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">การชำระเงินไปยังที่อยู่กระเป๋าสตางค์ของคุณจะใช้เวลาสูงสุด 3 วันโปรดตรวจสอบให้แน่ใจว่าคุณป้อนที่อยู่ของ Bitcoin ที่ถูกต้องเราจะไม่รับผิดชอบต่อความล้มเหลวใด ๆ ขอขอบคุณ</string>
+    <string name="dismis">ยกเลิก</string>
+    <string name="withdraws">ถอน</string>
+    <string name="sending_data">กำลังส่งข้อมูล</string>
+    <string name="mining_stopped">การทำเหมืองแร่หยุดลง</string>
+    <string name="not_connectd">คุณไม่ได้เชื่อมต่อ</string>
+    <string name="turn_on">โปรดเปิดการเชื่อมต่อข้อมูลของคุณและลองอีกครั้ง</string>
+    <string name="retryy">ลองใหม่อีกครั้ง</string>
+    <string name="wallet">โปรดป้อนที่อยู่กระเป๋าสตางค์</string>
+    <string name="threashold">ขออภัยคุณยังไม่ถึงเกณฑ์ของคุณ</string>
+    <string name="notmining">คุณไม่ใช่เหมืองแร่ Bitcoin</string>
+    <string name="miningfail">การทำเหมืองล้มเหลวลองอีกครั้งภายใน 2 นาที</string>
+    <string name="btcincrese">มูลค่า Bitcoin เพิ่มขึ้น</string>
+    <string name="mine_bitcoin">เหมือง Bitcoin</string>
+    <string name="available">Bitcoin mining now available</string>
 </resources>
