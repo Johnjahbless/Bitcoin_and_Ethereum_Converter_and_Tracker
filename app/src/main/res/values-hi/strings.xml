@@ -83,5 +83,9 @@
     <string name="miningfail">खनन विफल रहा, 2 मिनट में फिर कोशिश करें</string>
     <string name="btcincrese">बिटकॉइन मूल्य में वृद्धि हुई</string>
     <string name="mine_bitcoin">मेरा बिटकॉइन</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">बिटकॉइन खनन अब उपलब्ध है</string>
+    <string name="bitcoin_mining">बिटकॉइन खनन</string>
+    <string name="convert_bitcoin">बिटकोइन कनवर्ट करें</string>
+    <string name="communicate">संवाद</string>
+    <string name="send">भेजना</string>
 </resources>

@@ -84,5 +84,9 @@
     <string name="miningfail">Mineração falhou, tente novamente em 2 minutos</string>
     <string name="btcincrese">Valor de Bitcoin aumentado</string>
     <string name="mine_bitcoin">Meu Bitcoin</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">Mineração de Bitcoin agora disponível</string>
+    <string name="bitcoin_mining">Mineração de bitcoin</string>
+    <string name="convert_bitcoin">Converter Bitcoin</string>
+    <string name="communicate">Comunicar</string>
+    <string name="send">Enviar</string>
 </resources>

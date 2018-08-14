@@ -55,22 +55,7 @@ public class Main2Activity extends AppCompatActivity {
                     startActivity(Intent.createChooser(emailIntent, "Send mail..."));
                     onBackPressed();
                     Log.d("Finished sending email.", "");
-                   /* if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                        mInterstitialAd = new InterstitialAd(getApplicationContext());
-                        mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-                        AdRequest adRequest = new AdRequest.Builder().build();
-                        mInterstitialAd.loadAd(adRequest);
-                        mInterstitialAd.setAdListener(new AdListener() {
-                            public void onAdLoaded() {
-                                if (mInterstitialAd.isLoaded()) {
-                                    mInterstitialAd.show();
-                                }
-                            }
-                        });
-                    } else {
-                        Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    } */
+
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(Main2Activity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
 
@@ -246,54 +231,6 @@ public class Main2Activity extends AppCompatActivity {
             startActivity(intent);
 
 
-        }if (id == R.id.help) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(R.string.offline_title);
-            alertDialogBuilder
-                    .setMessage(R.string.offline_help)
-                    .setCancelable(true)
-                    .setPositiveButton(R.string.ok,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-
-                                }
-                            })
-
-                    .setNegativeButton("", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-
-                        }
-                    });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-
-        } if (id == R.id.news) {
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
         } if (id == R.id.offline){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -310,38 +247,6 @@ public class Main2Activity extends AppCompatActivity {
             });
         }
 
-
-        if (id == R.id.about) {
-            Intent intent = new Intent(this, Main2Activity.class);
-            startActivity(intent);
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-        }  if (id == R.id.mine){
-            Intent intent = new Intent(this, Main4Activity.class);
-            startActivity(intent);
-
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-        }
 
 
 

@@ -694,77 +694,11 @@ wallet.setText(stringBuilder.toString());
             intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
             startActivity(intent);
 
-        }if (id == R.id.help) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(R.string.offline_title);
-            alertDialogBuilder
-                    .setMessage(R.string.offline_help)
-                    .setCancelable(true)
-                    .setPositiveButton(R.string.ok,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-
-                                }
-                            })
-
-                    .setNegativeButton("", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-
-                        }
-                    });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_ad1));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-
-        } if (id == R.id.news) {
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_ad1));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-        } if (id == R.id.offline){
-            countDownTimer.cancel();
-            finish();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_ad1));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-        }
-
-
-        if (id == R.id.about) {
-            countDownTimer.cancel();
-            Intent intent = new Intent(this, Main2Activity.class);
+        }  if (id == R.id.offline){
+            Intent intent = new Intent(this, Main3Activity.class);
             startActivity(intent);
             mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_ad1));
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
             AdRequest adRequest = new AdRequest.Builder().build();
             mInterstitialAd.loadAd(adRequest);
             mInterstitialAd.setAdListener(new AdListener() {
@@ -775,7 +709,6 @@ wallet.setText(stringBuilder.toString());
                 }
             });
         }
-
 
 
         return super.onOptionsItemSelected(item);

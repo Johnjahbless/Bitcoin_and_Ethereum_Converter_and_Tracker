@@ -493,53 +493,6 @@ public class ConvertionActivity extends AppCompatActivity {
             startActivity(intent);
 
 
-        }if (id == R.id.help) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(R.string.notifications_allow);
-            alertDialogBuilder
-                    .setMessage(R.string.offline_help)
-                    .setCancelable(true)
-                    .setPositiveButton(R.string.ok,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-
-                                }
-                            })
-
-                    .setNegativeButton("", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-
-                        }
-                    });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-
-        } if (id == R.id.news) {
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
 
         }if (id == R.id.offline){
             Intent intent = new Intent(this, Main3Activity.class);
@@ -559,39 +512,6 @@ public class ConvertionActivity extends AppCompatActivity {
             });
         }
 
-            if (id == R.id.about) {
-                Intent intent = new Intent(this, Main2Activity.class);
-                startActivity(intent);
-                mInterstitialAd = new InterstitialAd(getApplicationContext());
-                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-                AdRequest adRequest = new AdRequest.Builder().build();
-                mInterstitialAd.loadAd(adRequest);
-                mInterstitialAd.setAdListener(new AdListener() {
-                    public void onAdLoaded() {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
-                    }
-                });
-            }  if (id == R.id.mine){
-            Intent intent = new Intent(this, Main4Activity.class);
-            startActivity(intent);
-            intent.putExtra("btc", BtcGetUsd);
-            intent.putExtra("eth", EthGetUSD);
-
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-        }
 
 
 

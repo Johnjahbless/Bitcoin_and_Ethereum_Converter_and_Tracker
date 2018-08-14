@@ -101,5 +101,9 @@
     <string name="notmining">Vous ne minez pas Bitcoin.</string>
     <string name="miningfail">L'extraction a échoué, réessayez dans 2 minutes</string>
     <string name="btcincrese">La valeur du bitcoin a augmenté</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">Bitcoin Mining maintenant disponible</string>
+    <string name="bitcoin_mining">Bitcoin Mining</string>
+    <string name="convert_bitcoin">Convertir Bitcoin</string>
+    <string name="communicate">Communiquer</string>
+    <string name="send">Envoyer</string>
 </resources>

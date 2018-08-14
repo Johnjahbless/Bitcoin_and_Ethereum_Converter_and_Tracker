@@ -159,7 +159,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio1/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_public_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio1/plugins/android/lib/android.jar!/images/material_design_icons/editor/ic_attach_money_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -169,8 +169,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="fa6110" />
-                            <entry key="outputName" value="icpublic" />
+                            <entry key="color" value="fbfbfb" />
+                            <entry key="outputName" value="ic_money" />
                             <entry key="sourceFile" value="C:\Users\ENDURANCE" />
                           </map>
                         </option>

@@ -84,5 +84,9 @@
     <string name="miningfail">Не удалось выполнить Mining, повторите попытку через 2 минуты</string>
     <string name="btcincrese">Увеличилось значение биткойна</string>
     <string name="mine_bitcoin">Мой биткойн</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">Теперь доступна добыча биткойнов</string>
+    <string name="bitcoin_mining">Биткойн Майнинг</string>
+    <string name="convert_bitcoin">Конвертировать биткойн</string>
+    <string name="communicate">сообщаться</string>
+    <string name="send">послать</string>
 </resources>

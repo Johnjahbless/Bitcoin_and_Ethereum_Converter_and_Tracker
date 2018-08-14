@@ -101,5 +101,9 @@
     <string name="notmining">أنت لا تعدين بيتكوين.</string>
     <string name="miningfail">فشل التعدين ، حاول مرة أخرى خلال دقيقتين</string>
     <string name="btcincrese">زيادة قيمة البيتكوين</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">التعدين بيتكوين متاحة الآن</string>
+    <string name="bitcoin_mining">التعدين بيتكوين</string>
+    <string name="convert_bitcoin">تحويل بيتكوين</string>
+    <string name="communicate">نقل</string>
+    <string name="send">إرسال</string>
 </resources>

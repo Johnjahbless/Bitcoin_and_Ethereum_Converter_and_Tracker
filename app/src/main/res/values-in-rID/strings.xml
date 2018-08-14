@@ -101,5 +101,9 @@
     <string name="miningfail">Penambangan gagal, coba lagi dalam 2 menit</string>
     <string name="btcincrese">Nilai Bitcoin meningkat</string>
     <string name="mine_bitcoin">Tambang Bitcoin</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">Penambangan Bitcoin sekarang tersedia</string>
+    <string name="bitcoin_mining">Penambangan Bitcoin</string>
+    <string name="convert_bitcoin">Konversikan Bitcoin</string>
+    <string name="communicate">Menyampaikan</string>
+    <string name="send">Kirim</string>
 </resources>

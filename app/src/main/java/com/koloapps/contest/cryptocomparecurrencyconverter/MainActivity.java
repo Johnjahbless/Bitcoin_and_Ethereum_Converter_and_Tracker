@@ -5,14 +5,22 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -42,7 +50,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
     CryptoCrcy cryptoCrcy;
     BTC btc;
     ETH eth;
@@ -89,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
     FrameLayout frameLayout;
     LinearLayout linearLayout;
+    FloatingActionButton fab;
+    public Animation fade;
     DecimalFormat df = new DecimalFormat("####0.00");
     double first_selected, first_selected1, second_selected, second_selected1, ghs_selected, zar_selected, kes_selected, gbp_selected,
             ing_selected, brl_selected, thb_selected, idr_selected, pkr_selected, php_selected, sar_selected;
@@ -104,10 +115,24 @@ public class MainActivity extends AppCompatActivity {
         mAdView = (AdView) findViewById(R.id.adView2);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-        // Locale locale = new Locale("pt-rBR", "de" + "es", "hi-rIN" + "ru-rRU");
-        //Configuration config = getBaseContext().getResources().getConfiguration();
-        //config.locale = locale;
-        //getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+         fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        fab.setVisibility(View.VISIBLE);
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3517746418699749/8344708392");
@@ -1164,56 +1189,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
 
-    /*
-    public static boolean isNetworkAvailable(Context context){
-        ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        if ( connectivityManager == null) {
-            return false;
-        }else {
-            NetworkInfo[] info = connectivityManager.getAllNetworkInfo();
-            if (info != null) {
-                for (int i = 0; i < info.length; i++) {
-                    if (info[i].getState() == NetworkInfo.State.CONNECTED) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-
-
-    }
-
-
-
-
-    public class InternetConnectivityReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-            boolean isConnected = networkInfo != null && networkInfo.isConnectedOrConnecting();
-
-            if (networkChangedListener != null) {
-                networkChangedListener.onNetworkConnectionChanged(isConnected);
-
-            }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
     }
 
-        public static boolean isInternetConnected() {
-            ConnectivityManager connectivityManager = (ConnectivityManager) CustomApplication.getInstance()
-                    .getApplicationContext()
-                    .getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-            return networkInfo != null && networkInfo.isConnectedOrConnecting();
-
-        }
-    }
-*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -1233,15 +1219,16 @@ public class MainActivity extends AppCompatActivity {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Hy, Download this Bitcoin and Ethereum android application, it's very useful, you can track Bitcoin and Ethereum exchange prices and can also convert to your local currency, i Love it! Am sure you will also Check it out using this link here.... https://play.google.com/store/apps/details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, " https://play.google.com/store/apps/details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
             startActivity(shareIntent);
 
         }
         if (id == R.id.settings) {
             Intent intent = new Intent(this, Main4Activity.class);
-            startActivity(intent);
             intent.putExtra("btc", BtcGetUsd);
             intent.putExtra("eth", EthGetUSD);
+            startActivity(intent);
+
 
             mInterstitialAd = new InterstitialAd(getApplicationContext());
             mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
@@ -1341,7 +1328,131 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
 
-        }if (id == R.id.help) {
+        }  if (id == R.id.offline){
+            Intent intent = new Intent(this, Main3Activity.class);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+            startActivity(intent);
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+        }
+            return super.onOptionsItemSelected(item);
+
+
+            // Inflate the menu; this adds items to the action bar if it is present.
+
+
+        }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        if (id == R.id.nav_camera) {
+
+            Intent intent = new Intent(this, Main4Activity.class);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+            startActivity(intent);
+
+
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+            Intent intent = new Intent(MainActivity.this, ConvertionActivity.class);
+            intent.putExtra("btc", BtcGetUsd);
+            intent.putExtra("eth", EthGetUSD);
+            startActivity(intent);
+
+
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+
+        }else if (id == R.id.nav_share){
+            Log.d("Send email", "");
+            String[] TO = {"koloapps@gmail.com"};
+            String[] CC = {""};
+
+
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.setData(Uri.parse("mailto:"));
+            emailIntent.setType("text/plain");
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+            emailIntent.putExtra(Intent.EXTRA_CC, CC);
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+
+            try {
+                startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                onBackPressed();
+                Log.d("Finished sending email.", "");
+
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(MainActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+
+            }
+
+
+        } else if (id == R.id.nav_slideshow) {
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+
+        } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+            startActivity(intent);
+            mInterstitialAd = new InterstitialAd(getApplicationContext());
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+            });
+        } else if (id == R.id.helpp){
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(R.string.offline_title);
             alertDialogBuilder
@@ -1376,81 +1487,35 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-        } if (id == R.id.news) {
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
 
-        } if (id == R.id.offline){
-            Intent intent = new Intent(this, Main3Activity.class);
-            intent.putExtra("btc", BtcGetUsd);
-            intent.putExtra("eth", EthGetUSD);
-            startActivity(intent);
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-        } if (id == R.id.mine){
-            Intent intent = new Intent(this, Main4Activity.class);
-            startActivity(intent);
-           intent.putExtra("btc", BtcGetUsd);
-            intent.putExtra("eth", EthGetUSD);
-
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
+        } else if (id == R.id.nav_send) {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, " https://play.google.com/store/apps/details?id=com.koloapps.contest.cryptocomparecurrencyconverter");
+            startActivity(shareIntent);
 
         }
 
-
-
-
-        if (id == R.id.about) {
-                Intent intent = new Intent(this, Main2Activity.class);
-                startActivity(intent);
-                mInterstitialAd = new InterstitialAd(getApplicationContext());
-                mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-                AdRequest adRequest = new AdRequest.Builder().build();
-                mInterstitialAd.loadAd(adRequest);
-                mInterstitialAd.setAdListener(new AdListener() {
-                    public void onAdLoaded() {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
-                    }
-                });
-            }
-
-
-            return super.onOptionsItemSelected(item);
-
-
-            // Inflate the menu; this adds items to the action bar if it is present.
-
-
-        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
+
+    public void fabmine(View view) {
+        Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+        startActivity(intent);
+        mInterstitialAd = new InterstitialAd(getApplicationContext());
+        mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequest);
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                }
+            }
+        });
+    }
+}
 

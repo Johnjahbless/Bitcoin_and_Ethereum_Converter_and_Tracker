@@ -39,7 +39,7 @@ public class Main3Activity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
 
     //defind String Array for spinner
-    String[] spinner_first = {"ETH- Ethereum", "Calculate ETH", "BTC- Bitcoin", "Calculate BTC" };
+    String[] spinner_first = { "BTC- Bitcoin", "Calculate BTC" };
     String[] spinner_second = {"USD - US Dollar", "EUR", "NAIRA - Nigeria", "GBP - British Pound",
             "ING - Indian Ruppe", "AUD - Austrialian Dollar", "CAD - Canadian Dollar",
             "SGD - Singapore Dollar", "CHF - Swiss Frame", "MYR - Malaysian Riggit", "JPY - Japanese Yen",
@@ -73,9 +73,9 @@ public class Main3Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // get value parsed from MainActivity
         BtcGetUsd = getIntent().getExtras().getDouble("btc");
-        EthGetUSD = getIntent().getExtras().getDouble("eth");
+      //  EthGetUSD = getIntent().getExtras().getDouble("eth");
         //final double uuuu = EthGetUSD;
-       final double uuuu = Math.round(EthGetUSD*100)/100;
+      // final double uuuu = Math.round(EthGetUSD*100)/100;
        //final double uuu = BtcGetUsd;
         final double uuu = Math.round(BtcGetUsd*100)/100;
         getBTC = (EditText) findViewById(R.id.getBTC);
@@ -145,7 +145,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 int pos = spinner.getSelectedItemPosition();
 
-                if (pos == 0) {
+             /*   if (pos == 0) {
                     //get Spinner selected item value
                     first_selected = ETHget;
                     if (EthGetUSD == 0.00) {
@@ -181,8 +181,8 @@ public class Main3Activity extends AppCompatActivity {
                     imageView.setImageResource(R.drawable.eth_coin);
                     line.setBackgroundColor(getResources().getColor(R.color.ethColor));
 
-                }
-                if (pos == 2) {
+                } */
+                if (pos == 0) {
                     //get Spinner selected item value
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
@@ -200,7 +200,7 @@ public class Main3Activity extends AppCompatActivity {
                     showId.setText("1 BTC ($): ");
                     imageView.setImageResource(R.drawable.btc_coin);
                     line.setBackgroundColor(getResources().getColor(R.color.btcColor));
-                } if (pos == 3) {
+                } if (pos == 1) {
                     first_selected = BTCget;
                     if (BtcGetUsd == 0.00){
                         getBTC.setText("7423");
@@ -631,72 +631,10 @@ public class Main3Activity extends AppCompatActivity {
             intent.setData(Uri.parse("market://details?id=com.koloapps.contest.cryptocomparecurrencyconverter"));
             startActivity(intent);
 
-        }if (id == R.id.help) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(R.string.offline_title);
-            alertDialogBuilder
-                    .setMessage(R.string.offline_help)
-                    .setCancelable(true)
-                    .setPositiveButton(R.string.ok,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-
-                                }
-                            })
-
-                    .setNegativeButton("", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-
-                        }
-                    });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
 
 
-        } if (id == R.id.news) {
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
-        } if (id == R.id.offline){
-            finish();
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-        }
-
-
-        if (id == R.id.about) {
-            Intent intent = new Intent(this, Main2Activity.class);
+        }  if (id == R.id.offline){
+            Intent intent = new Intent(this, Main3Activity.class);
             startActivity(intent);
             mInterstitialAd = new InterstitialAd(getApplicationContext());
             mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
@@ -709,24 +647,6 @@ public class Main3Activity extends AppCompatActivity {
                     }
                 }
             });
-        } if (id == R.id.mine){
-            Intent intent = new Intent(this, Main4Activity.class);
-            startActivity(intent);
-            intent.putExtra("btc", BtcGetUsd);
-            intent.putExtra("eth", EthGetUSD);
-
-            mInterstitialAd = new InterstitialAd(getApplicationContext());
-            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                }
-            });
-
         }
 
 

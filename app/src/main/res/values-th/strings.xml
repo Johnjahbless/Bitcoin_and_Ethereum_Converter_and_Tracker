@@ -88,5 +88,9 @@
     <string name="miningfail">การทำเหมืองล้มเหลวลองอีกครั้งภายใน 2 นาที</string>
     <string name="btcincrese">มูลค่า Bitcoin เพิ่มขึ้น</string>
     <string name="mine_bitcoin">เหมือง Bitcoin</string>
-    <string name="available">Bitcoin mining now available</string>
+    <string name="available">มีการทำเหมือง Bitcoin แล้ว</string>
+    <string name="bitcoin_mining">Bitcoin Mining</string>
+    <string name="convert_bitcoin">แปลง Bitcoin</string>
+    <string name="communicate">สื่อสาร</string>
+    <string name="send">ส่ง</string>
 </resources>
