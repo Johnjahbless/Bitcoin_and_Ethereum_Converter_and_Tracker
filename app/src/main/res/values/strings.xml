@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Bitcoin/Ethereum</string>
     <string name="click_text">START</string>
+
+    <string name="test_ad" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
     <string name="ad_unit_id" translatable="false">ca-app-pub-3517746418699749/3549332544</string>
     <string name="ad_unit_id1" translatable="false">ca-app-pub-3517746418699749/8196020533</string>
     <string name="ad_unit_id2" translatable="false">ca-app-pub-3517746418699749/1747104209</string>
@@ -87,7 +89,7 @@
     <string name="save">Save</string>
     <string name="withdraw_bitcoin">Withdraw Bitcoin.....</string>
     <string name="you_can_withdraw_bitcoin_when_you_get_to_0_004_threashold">You can withdraw Bitcoin when you get to 0.004 threshold</string>
-    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">Payment to your wallet address will takes 3 days maximum to arrive, please ensure you enter your correct valid bitcoin address, we will not be liable for any failure. Thank you</string>
+    <string name="payment_to_your_wallet_address_will_takes_3_days_maximum_to_arrive_please_ensure_you_enter_your_correct_valid_bitcoin_address_we_will_not_be_liable_for_any_failure_thank_you">Payment to your wallet address will takes 3 days maximum to arrive, please ensure you enter your correct valid bitcoin address and update the app before requesting for withdrawal, we will not be liable for any failure. Thank you</string>
     <string name="dismis">Dismiss</string>
     <string name="withdraws">Withdraw</string>
     <string name="sending_data">Sendiing Data</string>

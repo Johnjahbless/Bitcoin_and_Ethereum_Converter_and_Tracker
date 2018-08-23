@@ -276,6 +276,7 @@
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </LinearLayout>
+
 <FrameLayout
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"

@@ -117,10 +117,12 @@ String totalScore = " ";
 
             fileIn.close();
             inputStreamReader.close();
-
-            scoreText.setText(stringBuilder.toString());
-            String score = scoreText.getText().toString();
+scoreText.setText(stringBuilder.toString());
+        String score = scoreText.getText().toString();
+        //String my = String.valueOf(myText);
         total = Double.valueOf(score);
+
+
 
 
 
@@ -426,15 +428,19 @@ wallet.setText(stringBuilder.toString());
     }
 
     public void withdrwaBTC(View view) {
-        try {
-            progressDialog.show();
-            {
-                wait(9000);
-                withdrawCardView.setVisibility(View.GONE);
-            }
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), R.string.threashold, Toast.LENGTH_LONG).show();
+        if (total >= 0.004) {
 
+        } else {
+            try {
+                progressDialog.show();
+                {
+                    wait(9000);
+                    withdrawCardView.setVisibility(View.GONE);
+                }
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), R.string.threashold, Toast.LENGTH_LONG).show();
+
+            }
         }
     }
 
@@ -491,7 +497,8 @@ wallet.setText(stringBuilder.toString());
        sym.setDecimalSeparator('.');
        df.setDecimalFormatSymbols(sym);
 
-     //  String totaltext = scoreText.getText().toString();
+
+       //String totaltext = String.valueOf(total);
        String totaltext = (df.format(total));
 
            if (totalScore.equals(String.valueOf(""))) {
@@ -695,8 +702,7 @@ wallet.setText(stringBuilder.toString());
             startActivity(intent);
 
         }  if (id == R.id.offline){
-            Intent intent = new Intent(this, Main3Activity.class);
-            startActivity(intent);
+          onBackPressed();
             mInterstitialAd = new InterstitialAd(getApplicationContext());
             mInterstitialAd.setAdUnitId(getString(R.string.admob_interstetial_ad));
             AdRequest adRequest = new AdRequest.Builder().build();

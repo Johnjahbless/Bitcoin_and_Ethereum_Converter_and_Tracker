@@ -330,7 +330,7 @@ public class Main3Activity extends AppCompatActivity {
                     second_selected = 0.01719;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("RUB") + df.format(uu));
-                } else if (sel == "THAI BAHT - Thailand") {
+                } else if (sel == "THB - Thailand THAI BAHT") {
                     second_selected = 0.030;
                     double uu = (first_selected / second_selected) * getText;
                     second.setText(Utils.getCurrencySymbol("THB") + df.format(uu));
